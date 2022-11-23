@@ -20,12 +20,12 @@ const auth = getAuth(app)
 // -----------
 // Register from create
  
-// const NewRegisterUser = (email,password)=>{
-//     setLoader(true)
-//     return createUserWithEmailAndPassword(auth,email,password);
+const NewRegisterUser = (email,password)=>{
+    setLoader(true)
+    return createUserWithEmailAndPassword(auth,email,password);
  
  
-// }
+}
 // ----------------
 // Update Profile name and img
 // const ProfilesUpdateUser = (profile)=>{
@@ -67,7 +67,8 @@ const loginUsers= (email,password)=>{
  
  
 const allInfoData = {
-    loginUsers
+    loginUsers,
+    NewRegisterUser,
     
  
  
