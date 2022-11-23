@@ -5,13 +5,11 @@ import { router } from './Routers/Routes';
 
 function App() {
   return (
-    <div className="">
+    <div style={{display:"grid",
+    justifyContent:"center",
+    alignItems:"center"}} className=" max-w-[1200px] ">
       <RouterProvider router={router}></RouterProvider>
-      <button className="btn btn-info">Info</button>
-<button className="btn btn-success">Success</button>
-<button className="btn btn-warning">Warning</button>
-<button className="btn btn-error">Error</button>
-    
+     
     </div>
   );
 }
