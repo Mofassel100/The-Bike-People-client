@@ -8,8 +8,18 @@ import Main from "../ProductComponent/Main/Main";
 import Product from "../ProductComponent/Product/Product";
 import PrivateRouter from "./PrivateRoutes";
 import Blogs from '../ProductComponent/Blogs/Blogs'
+import DeshbordLayOut from "../ProductComponent/DashbordLayOut/Deshbord/DeshbordLayOut";
+import Deshbord from "../ProductComponent/DashbordLayOut/Deshbord/Deshbord";
+import AddAProduct from "../ProductComponent/DashbordLayOut/AddAPoroduct/AddAProduct";
+import MyProduct from "../ProductComponent/DashbordLayOut/MyProduct/MyProduct";
+import AllSellers from "../ProductComponent/DashbordLayOut/AllSelers/AllSellers";
+import AllBuyers from "../ProductComponent/DashbordLayOut/AllBuyers/AllBuyers";
+import MyOrders from "../ProductComponent/DashbordLayOut/MyOrders/MyOrders";
 
-export const router = createBrowserRouter([{
+
+
+export const router = createBrowserRouter([
+    {
     path:"/",
     element:<Main></Main>,
     errorElement:<ErrorPages></ErrorPages>,
@@ -38,9 +48,35 @@ export const router = createBrowserRouter([{
     ]
 },
 {
-
-}
-
-
-
+    path:"/deshbord",
+    element:<DeshbordLayOut></DeshbordLayOut>,
+    errorElement:<ErrorPages></ErrorPages>,
+    children:[
+        {
+            path:"/deshbord/deshbord",
+            element:<Deshbord></Deshbord>
+        },
+        {
+           path:"/deshbord/addproduct",
+           element:<AddAProduct></AddAProduct> 
+        },
+        {
+            path:"/deshbord/myproduct",
+            element:<MyProduct></MyProduct>
+        },
+        {
+            path:'deshbord/allsellers',
+            element:<AllSellers></AllSellers>
+        },
+        {
+            path:"deshbord/allbuyers",
+            element:<AllBuyers></AllBuyers>
+        },
+        {
+            path:"deshbord/myorders",
+            element:<MyOrders></MyOrders>
+        }
+    ]
+    }
+    
 ])
