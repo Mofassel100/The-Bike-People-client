@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BookNow from '../BookNow/BookNow';
+import PrivateRoutes from '../../Routers/PrivateRoutes'
 
 const Product = () => {
     const productsData = useLoaderData()
@@ -24,12 +26,15 @@ const Product = () => {
                                             <p>Used Times : {product?.age}</p>
                                           
                                             <div className="card-actions justify-end">
-                                                <button className="btn btn-primary">Book Now</button>
+                                               
+                                                <label htmlFor="bookNow" className="btn btn-primary">Book Now</label>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
+                                 <BookNow  product={product}></BookNow>
+                                
 
 
                             </>)
@@ -37,6 +42,11 @@ const Product = () => {
                     </div>
 
                 </div>
+            </div>
+            <div>
+
+            
+            
             </div>
 
         </div>

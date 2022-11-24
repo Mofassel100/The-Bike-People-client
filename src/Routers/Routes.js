@@ -5,6 +5,7 @@ import Register from "../ProductComponent/Authentication/Register";
 import Home from "../ProductComponent/Home/Home";
 import Main from "../ProductComponent/Main/Main";
 import Product from "../ProductComponent/Product/Product";
+import PrivateRouter from "./PrivateRoutes";
 
 export const router = createBrowserRouter([{
     path:"/",
@@ -24,7 +25,7 @@ export const router = createBrowserRouter([{
         },
         {
             path:'/products/:company',
-            element:<Product></Product>,
+            element:<PrivateRouter><Product></Product></PrivateRouter>,
             loader:({params})=>fetch(`http://localhost:4000/products/${params.company}`)
         }
     ]
