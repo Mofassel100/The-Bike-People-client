@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const BookNow = ({product}) => {
@@ -8,7 +9,11 @@ const BookNow = ({product}) => {
     console.log(product);
     const toasts = ()=>{
       toast.success('Booked')
+      navigate(from,{replace:true})
     }
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
     
     if(loader){
         return <h1 className='text-center'> Loader</h1>
@@ -62,7 +67,11 @@ const BookNow = ({product}) => {
         </div>
        
         <div className="form-control mt-6">
-          <button onClick={toasts} className="btn btn-primary"> Submit</button>
+          <Link >
+          
+          <button  onClick={toasts}  className="btn btn-primary"> Submit</button>
+          </Link>
+          
         </div>
       </div>
     </div>
