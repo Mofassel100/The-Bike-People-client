@@ -1,0 +1,24 @@
+[
+    {
+        "picture": "https://images.prismic.io/zero-cms-disco/42f383e6-3690-48b6-9e18-b691d8f32c0a_S_7.2_360_00.png?auto=compress,format&rect=0,0,2560,1600&w=2560&h=1600",
+        "age": "4 Month",
+        "eyeColor": "green",
+        "name": "Zero Motorcycles",
+        "gender": "female",
+        "company": "ZERO"
+      },
+      {
+       
+        "picture": "http://www.autospyders.com/images/Aprilia%20RS%20150.jpg",
+        "eyeColor": "green",
+        "name": "APRILIA BIKE",
+        "gender": "male",
+        "company": "APRILIA"
+      },
+      {
+        "picture": "https://www.mototechindia.com/wp-content/uploads/2022/03/tvs-adventure-310.jpg",
+        "name": "TVS Motors Bikes",
+        "gender": "female",
+        "company": "TVS"
+      }
+]

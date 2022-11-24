@@ -53,22 +53,24 @@ const loginUsers= (email,password)=>{
 // useEffect
  
  
-// useEffect(()=>{
+useEffect(()=>{
  
-// const unsubCriber = onAuthStateChanged(auth,current=>{
+const unsubCriber = onAuthStateChanged(auth,current=>{
    
-//     setLoader(false)
-//     setUser(current)
-// })
-// return ()=>unsubCriber()
+    setLoader(false)
+    setUser(current)
+})
+return ()=>unsubCriber()
  
-// },[])
+},[])
 // ------------
  
  
 const allInfoData = {
     loginUsers,
     NewRegisterUser,
+    user,
+    loader,
     
  
  

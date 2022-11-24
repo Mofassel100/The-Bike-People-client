@@ -5,9 +5,7 @@ import { router } from './Routers/Routes';
 
 function App() {
   return (
-    <div style={{display:"grid",
-    justifyContent:"center",
-    alignItems:"center"}} className=" max-w-[1200px] ">
+    <div  className="   ">
       <RouterProvider router={router}></RouterProvider>
      
     </div>

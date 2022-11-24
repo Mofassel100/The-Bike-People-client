@@ -22,9 +22,9 @@ const Login = () => {
 
     }
     return (
-        <div>
-            <form onSubmit={handleSubmit(hadleLogingSubmit)}>
-                <p className='text-2xl'>Login From</p>
+        <div className=' grid justify-center items-center bg-purple-200 mx-2'>
+            <form onSubmit={handleSubmit(hadleLogingSubmit)} >
+                <p className='text-2xl text-'>Login From</p>
 
 
                 <div className="form-control w-full max-w-xs">
