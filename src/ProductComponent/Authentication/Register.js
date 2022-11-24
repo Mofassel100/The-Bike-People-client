@@ -1,29 +1,49 @@
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
-    const {NewRegisterUser}=useContext(AuthContext)
+    const { NewRegisterUser, UpdateUsersProfils } = useContext(AuthContext)
+    let navigate = useNavigate();
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const hadleLogingSubmit = (data) => {
-        NewRegisterUser(data.email,data.password)
-        .then((result)=>{
+        NewRegisterUser(data.email, data.password)
+            .then((result) => {
 
-            console.log(result);
-            toast.success('login Success full')
-        })
-        .catch(error=>{
-            toast.error(error.message)
-        })
+              
+
+                const profils = {
+                    displayName: data.name,
+
+                }
+                UpdateUsersProfils(profils)
+                    .then(result => {
+                        toast.success('Update Success full')
+                       
+                        navigate(from, { replace: true });
+
+
+                    })
+                    .catch(error => {
+                        toast.error(error.message)
+                        console.log(error);
+                    })
+            })
+            .catch(error => {
+                toast.error(error.message)
+            })
 
 
     }
     return (
-        <div>
+        <div className=' grid justify-center items-center bg-purple-200 mx-2'>
             <form onSubmit={handleSubmit(hadleLogingSubmit)}>
-                <p className='text-2xl '>Login From</p>
+                <p className='text-2xl '>Register Form</p>
 
 
                 <div className="form-control w-full max-w-xs">
@@ -32,7 +52,16 @@ const Register = () => {
 
                     </label>
                     <input type="text" className="input input-bordered w-full max-w-xs" {...register("name", { required: "Name in required" })} placeholder="Enter Your name" />
-                   
+
+
+                </div>
+                <div className="form-control w-full max-w-xs">
+                    <label className="label">
+                        <span className="label-text">Photo URL</span>
+
+                    </label>
+                    <input type="text" className="input input-bordered w-full max-w-xs" {...register("photoURL")} placeholder="Enter Your photo URL" />
+
 
                 </div>
                 <div className="form-control w-full max-w-xs">
@@ -63,15 +92,15 @@ const Register = () => {
                 </div>
 
 
-                
-              
-                    <div className='text-center my-4'>
+
+
+                <div className='text-center my-4'>
                     <button className='btn btn '>Register</button>
-                    </div>
+                </div>
 
 
 
-             
+
 
             </form>
         </div>

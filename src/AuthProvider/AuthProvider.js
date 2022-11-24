@@ -28,10 +28,10 @@ const NewRegisterUser = (email,password)=>{
 }
 // ----------------
 // Update Profile name and img
-// const ProfilesUpdateUser = (profile)=>{
-//     setLoader(true)
-//     return updateProfile(user,{profile});
-// }
+const UpdateUsersProfils = (profile)=>{
+    setLoader(true)
+    return updateProfile(auth.currentUser,profile);
+}
 // ---------------
 // login from
  
@@ -43,11 +43,11 @@ const loginUsers= (email,password)=>{
 // ---------------
 // log Out from
  
-// const LogOutUser = ()=>{
+const LogOutUser = ()=>{
  
-//     setLoader(true)
-//     return signOut(auth)
-// }
+    setLoader(true)
+    return signOut(auth)
+}
 // -----------
  
 // useEffect
@@ -71,6 +71,9 @@ const allInfoData = {
     NewRegisterUser,
     user,
     loader,
+    LogOutUser ,
+    UpdateUsersProfils
+    
     
  
  

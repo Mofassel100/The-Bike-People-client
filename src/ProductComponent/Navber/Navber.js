@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navber = () => {
+  const {LogOutUser ,user}= useContext(AuthContext)
   const myInfo = <React.Fragment>
-    <li> <Link to='login'>Login</Link></li>
+    {user?.uid? 
+    <>
+     <li><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
+     <li><Link >{user?.displayName}</Link></li>
+    </>
+    :
+    <>
+     <li> <Link to='login'>Login</Link></li>
     <li><Link to='register'>Register</Link></li>
+    </>}
+   
+   
+    
    
     
   </React.Fragment>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar " data-theme="cupcake">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

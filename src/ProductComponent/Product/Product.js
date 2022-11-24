@@ -13,9 +13,9 @@ const Product = () => {
                         {
                             productsData?.map(product => <>
                                 <div>
-                                    <div className="card my-5 lg:card-side shadow-xl">
+                                    <div className="card my-5 lg:card-side shadow-xl bg-rose-200">
                                         <figure><img src={product?.picture} alt="Album" /></figure>
-                                        <div className="card-body bg-rose-200">
+                                        <div className="card-body ">
                                             <h2 className="card-title">{product?.name}</h2>
                                             <div className='grid grid-cols-2 lg:grid-cols-1'>
                                             <p className=''><span className='text-'>Orginal Price : </span><span className='text-green-400'>{product?.OrginalePrice}</span></p>
