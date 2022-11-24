@@ -65,7 +65,7 @@ const Home = () => {
                     <h1 className="mb-5 text-5xl text-cyan-400 font-bold">{catagory?.name}</h1>
                     <p className="mb-5 text-pink-300">{catagory?.company}</p>
                    <div className='mt-10'>
-                   <Link to={`/products/${catagory?.company}`} className='text-2xl btn btn-success text-pink-300 '>Buy Now {catagory?.company} MotorBikes</Link>
+                   <Link to={`/products/${catagory?.company}`} className='text-xl btn btn-success text-pink-300 '>Buy Now {catagory?.company} MotorBikes</Link>
                    </div>
                    
                   </div>
