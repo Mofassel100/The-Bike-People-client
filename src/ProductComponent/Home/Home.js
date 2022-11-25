@@ -8,7 +8,7 @@ const Home = () => {
     queryFn: async () => {
       const res = await fetch('http://localhost:4000/catagory')
       const data = await res.json()
-      console.log(data);
+     
       return data;
     }
   })
@@ -16,7 +16,7 @@ const Home = () => {
   if (isLoading) {
     return <h1>Loaserdf</h1>
   }
-  console.log(data);
+ 
   return (
     <div>
       <div className="carousel w-full">
@@ -55,8 +55,9 @@ const Home = () => {
         
 
         {data?.map(catagory =>
-          <>
-            <div className=''>
+        
+       
+            <div key={catagory._id}  className=''>
               
               <div className="hero min-h-screen" style={{ backgroundImage: `url(${catagory?.picture})` }}>
                 <div className="hero-overlay bg-opacity-50"></div>
@@ -72,7 +73,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-          </>
+   
         )}
 
       </div>
