@@ -7,7 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
-    const { NewRegisterUser, UpdateUsersProfils } = useContext(AuthContext)
+    const { NewRegisterUser, UpdateUsersProfils,loader } = useContext(AuthContext)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -73,6 +73,10 @@ const Register = () => {
             })
 
 
+    }
+    if(loader){
+
+        return <h1>Loader</h1>
     }
   
     return (
@@ -146,11 +150,7 @@ const Register = () => {
               
 
             </form>
-            {/* <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register("firstName")} />
-      
-      <input type="submit" />
-    </form> */}
+           
         </div>
     );
 };

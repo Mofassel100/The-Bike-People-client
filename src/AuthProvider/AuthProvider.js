@@ -7,16 +7,16 @@ export const AuthContext = createContext()
 const AuthProvider = ({children}) => {
     const [user,setUser]= useState()
 const [loader,setLoader]= useState(true)
-// const googleProvidr = new GoogleAuthProvider();
+const googleProvidr = new GoogleAuthProvider();
  
 const auth = getAuth(app)
 // google sign in
  
-// const googleLogIn = ()=>{
+const googleLogIn = ()=>{
  
    
-//     return signInWithPopup(auth,googleProvidr);
-// }
+    return signInWithPopup(auth,googleProvidr);
+}
 // -----------
 // Register from create
  
@@ -72,7 +72,9 @@ const allInfoData = {
     user,
     loader,
     LogOutUser ,
-    UpdateUsersProfils
+    UpdateUsersProfils,
+    googleLogIn,
+    
     
     
  

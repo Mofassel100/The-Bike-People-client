@@ -1,9 +1,46 @@
 import React, { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Navber = () => {
-  const { LogOutUser, user } = useContext(AuthContext)
+  const { LogOutUser, user,googleLogIn } = useContext(AuthContext)
+
+const googleLogin =()=>{
+
+  googleLogIn()
+  .then(
+    result=>{
+      const user = result.user;
+
+      const usersdata ={
+        name:user.displayName,
+        email:user.email,
+        role:'buyer'
+      }
+      fetch('http://localhost:4000/usersInfo',{
+        method:"POST",
+        headers:{
+          "content-type":"application/json"
+        },
+        body:JSON.stringify(usersdata)
+      })
+      .then(result =>{
+        toast.success('Google Login Succefull')
+
+        console.log(result);
+      })
+      .catch(error=>{
+        toast.error(error.message)
+      })
+    }
+
+  )
+  .catch(error=>{
+    toast.error(error.message)
+  })
+}
+
   const myInfo = <React.Fragment>
     {user?.uid ?
       <>
@@ -14,6 +51,7 @@ const Navber = () => {
       <>
         <li> <Link to='login'>Login</Link></li>
         <li><Link to='register'>Register</Link></li>
+        <li><button onClick={googleLogin} >Google Login</button></li>
       </>}
     <li ><Link to='/blogs'>Blogs</Link></li>
   </React.Fragment>
