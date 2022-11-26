@@ -13,6 +13,7 @@ const auth = getAuth(app)
 // google sign in
  
 const googleLogIn = ()=>{
+    setLoader(true)
  
    
     return signInWithPopup(auth,googleProvidr);
@@ -57,8 +58,9 @@ useEffect(()=>{
  
 const unsubCriber = onAuthStateChanged(auth,current=>{
    
-    setLoader(false)
+   
     setUser(current)
+    setLoader(false)
 })
 return ()=>unsubCriber()
  
