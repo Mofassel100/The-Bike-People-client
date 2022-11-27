@@ -16,6 +16,7 @@ const AddAProduct = (data) => {
 
   
     const addProductSubmit = (data) => {
+      
 
         const addProduct = {
             company:data.catagory,
@@ -43,7 +44,8 @@ const AddAProduct = (data) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+               navigate('/deshbord/myproduct')
+               console.log(data);
             })
 
     }

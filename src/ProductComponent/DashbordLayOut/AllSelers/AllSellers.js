@@ -7,6 +7,11 @@ const AllSellers = () => {
     const [data, setDatas] = useState([])
     const [loader, setLoader] = useState(true)
 
+
+
+
+
+
 const handleDelete =id =>{
 
     fetch(`http://localhost:4000/userSeler/Delete/${id}`,{
@@ -14,9 +19,17 @@ const handleDelete =id =>{
     })
     .then(res=>res.json())
     .then(deletes =>{
-        const confirms = window.confirm("Are You Sure Delete")
+
+        const confirms = window.confirm("Are Are Sure Delete Items")
+   
         if( deletes.deletedCount > 0 && confirms){
+
+            
+            const Sellarremaining = data.filter(remain => remain._id !==id)
             toast.error("delete Succes Fully Items Removes")
+            setDatas(Sellarremaining)
+
+            
         }
         else{
             toast.error('Not Delete item')

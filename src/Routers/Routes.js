@@ -16,6 +16,7 @@ import AllSellers from "../ProductComponent/DashbordLayOut/AllSelers/AllSellers"
 import AllBuyers from "../ProductComponent/DashbordLayOut/AllBuyers/AllBuyers";
 import MyOrders from "../ProductComponent/DashbordLayOut/MyOrders/MyOrders";
 import AdminRoute from "./AdminPrivateRoute";
+import SellarPrivateRoute from "./SellarPrivateRoute";
 
 
 
@@ -60,11 +61,11 @@ export const router = createBrowserRouter([
         },
         {
            path:"/deshbord/addproduct",
-           element:<AddAProduct></AddAProduct> 
+           element:<SellarPrivateRoute><AddAProduct></AddAProduct></SellarPrivateRoute> 
         },
         {
             path:"/deshbord/myproduct",
-            element:<MyProduct></MyProduct>
+            element:<SellarPrivateRoute><MyProduct></MyProduct></SellarPrivateRoute>
         },
         {
             path:'deshbord/allsellers',
