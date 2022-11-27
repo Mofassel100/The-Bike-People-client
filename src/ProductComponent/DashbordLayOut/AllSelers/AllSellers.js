@@ -1,25 +1,30 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 
 const AllSellers = () => {
-    // const bd ={
-    //     role:"sellar"
-    // }
-    // const { sellarData:data=[], isLoading } = useQuery({
-    //     queryKey: ['catagory'],
-    //     queryFn: async () => {
-    //     //   const res = await fetch(`http://localhost:4000/userInfoSellar?role=${bd}`)
-    //       const sellarData = await res.json()
-
-    //       return sellarData;
-    //     }
-    //   })
-
-    //   if (isLoading) {
-    //     return <h1>Loaserd</h1>
-    //   }
+   
     const [data, setDatas] = useState([])
     const [loader, setLoader] = useState(true)
+
+const handleDelete =id =>{
+
+    fetch(`http://localhost:4000/userSeler/Delete/${id}`,{
+        method:"DELETE"
+    })
+    .then(res=>res.json())
+    .then(deletes =>{
+        const confirms = window.confirm("Are You Sure Delete")
+        if( deletes.deletedCount > 0 && confirms){
+            toast.error("delete Succes Fully Items Removes")
+        }
+        else{
+            toast.error('Not Delete item')
+        }
+
+
+    })
+}
     useEffect(
         () => {
 
@@ -48,9 +53,10 @@ const AllSellers = () => {
     <thead>
       <tr>
         <th>
-          <label>
-            <input type="checkbox" className="checkbox" />
-          </label>
+            <button>Deletet</button>
+          {/* <label>
+            <input  type="checkbox" className="checkbox" />
+          </label> */}
         </th>
         <th>Name</th>
         <th>Email</th>
@@ -62,9 +68,8 @@ const AllSellers = () => {
      
       <tr>
         <th>
-          <label><td>Delete</td>
-            <input  type="checkbox" className="checkbox" />
-          </label>
+        <button onClick={()=>handleDelete(sellar?._id)} className='btn btn-warning'>Delete</button>
+         
         </th>
         <td>
           <div className="flex items-center space-x-3">
