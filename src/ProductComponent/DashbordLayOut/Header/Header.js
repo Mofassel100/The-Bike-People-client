@@ -1,28 +1,43 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
-import AdminRole from '../Deshbord/Hooks/AdminRole';
+import AdminRole from '../../../Hooks/AdminRole';
+
 
 
 
 const Header = () => {
-  const {user}= useContext(AuthContext)
-  const {AdminRoles}=AdminRole(user?.email)
+  const {user,loader}= useContext(AuthContext)
+
+  // useEffect(()=>{
+  //  useAdmin(user?)
+  
+
+
+  // },[user?.email])
+  
+const [isAdminRole]=AdminRole(user?.email)
    
     const deshbord = <React.Fragment>
     
     <li ><Link to='/deshbord'>Deshbord</Link></li>
     <li ><Link to='/deshbord/addproduct'>Add Product</Link></li>
     <li ><Link to='/deshbord/myproduct'>My Product </Link></li>
-    {AdminRoles && <>
+    {isAdminRole && <>
       <li ><Link to='deshbord/allsellers'>All Sellar</Link></li>
     <li ><Link to='deshbord/allbuyers'>All Buyers</Link></li>
     </>}
+    
+    
+  
    
     <li ><Link to='deshbord/myorders'>My Orders</Link></li>
 
     
   </React.Fragment>
+ 
+  
+
     
     return (
         <div>

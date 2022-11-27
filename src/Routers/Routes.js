@@ -15,6 +15,8 @@ import MyProduct from "../ProductComponent/DashbordLayOut/MyProduct/MyProduct";
 import AllSellers from "../ProductComponent/DashbordLayOut/AllSelers/AllSellers";
 import AllBuyers from "../ProductComponent/DashbordLayOut/AllBuyers/AllBuyers";
 import MyOrders from "../ProductComponent/DashbordLayOut/MyOrders/MyOrders";
+import AdminRoute from "./AdminPrivateRoute";
+
 
 
 
@@ -49,7 +51,7 @@ export const router = createBrowserRouter([
 },
 {
     path:"/deshbord",
-    element:<DeshbordLayOut></DeshbordLayOut>,
+    element:<PrivateRouter><DeshbordLayOut></DeshbordLayOut></PrivateRouter>,
     errorElement:<ErrorPages></ErrorPages>,
     children:[
         {
@@ -66,11 +68,11 @@ export const router = createBrowserRouter([
         },
         {
             path:'deshbord/allsellers',
-            element:<AllSellers></AllSellers>
+            element:<AdminRoute><AllSellers></AllSellers></AdminRoute>
         },
         {
             path:"deshbord/allbuyers",
-            element:<AllBuyers></AllBuyers>
+            element:<AdminRoute><AllBuyers></AllBuyers></AdminRoute>
         },
         {
             path:"deshbord/myorders",

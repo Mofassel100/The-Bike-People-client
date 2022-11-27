@@ -1,6 +1,8 @@
 import React, { createContext, useEffect, useState } from 'react';
 import {createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth"
 import app from '../Firebase.config/Firebase.config'
+import { current } from 'daisyui/src/colors';
+;
 export const AuthContext = createContext()
  
  
@@ -8,6 +10,7 @@ const AuthProvider = ({children}) => {
     const [user,setUser]= useState()
 const [loader,setLoader]= useState(true)
 const googleProvidr = new GoogleAuthProvider();
+
  
 const auth = getAuth(app)
 // google sign in
@@ -57,14 +60,14 @@ const LogOutUser = ()=>{
 useEffect(()=>{
  
 const unsubCriber = onAuthStateChanged(auth,current=>{
-   
+    setLoader(false)
    
     setUser(current)
-    setLoader(false)
+    
 })
 return ()=>unsubCriber()
  
-},[])
+},[current])
 // ------------
  
  
