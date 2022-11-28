@@ -1,4 +1,15 @@
-# Getting Started with Create React App
+##  My Projec Title : Re-Sales Motor Bikes
+Project Live Link :  https://final-project-clien-assignment.web.app
+
+
+# Admin Information 
+admin email :  sm-mofassel-hosain@123.com
+admin Password  :  123456
+
+My Re-Sales Motor bikes projec.
+style :tailwind css
+Project Create : Firebase 
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
