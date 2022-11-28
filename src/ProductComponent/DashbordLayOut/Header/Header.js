@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import AdminRole from '../../../Hooks/AdminRole';
+import BuyerRole from '../../../Hooks/BuyerRole';
 import SellarRole from '../../../Hooks/SellarRoles';
 import Footer from '../../Footer/Footer';
 
@@ -20,6 +21,7 @@ const Header = () => {
   
 const [isAdminRole]=AdminRole(user?.email)
 const [isSeller]=SellarRole(user?.email)
+const [isBuyer]=BuyerRole(user?.email)
    
     const deshbord = <React.Fragment>
     
@@ -37,8 +39,10 @@ const [isSeller]=SellarRole(user?.email)
     
     
   
-   
-    <li ><Link to='deshbord/myorders'>My Orders</Link></li>
+   {isBuyer && 
+   <li ><Link to='deshbord/myorders'>My Orders</Link></li>
+   }
+    
 
     
   </React.Fragment>

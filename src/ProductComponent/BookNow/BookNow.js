@@ -26,40 +26,65 @@ const BookNow = ({product}) => {
 
     </div>
     }
+    const handleBuyerOrder=(event)=>{
+
+      event.preventDefault()
+      const form = event.target;
+      const email =form.email.value
+      const name =form.name.value
+      const phone =form.phone.value
+      const location =form.location.value
+      const company =form.company.value
+      const modalData = {
+        email,
+        name,
+        phone,
+        location,
+        
+      }
+      fetch('https://final-resale-project-assignment.vercel.app/bookmodal',{
+        method:"POST",
+        headers:{"content-type":"application/json"},
+        body:JSON.stringify(modalData)
+      })
+      .then(res=>res.json())
+      .then(
+        data=>console.log(data)
+      )
+  
+    }
     return (
         <div>
-           {/* The button to open modal */}
-
-
-{/* Put this part before </body> tag */}
+        
 <input type="checkbox" id="bookNow" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
     <div>
-    <div className="card-body">
+      <form onSubmit ={handleBuyerOrder}>
+      <div className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Product Name</span>
           </label>
-          <input type="text"  defaultValue={company} readOnly className="input input-bordered" />
+          <input type="text" name='company' defaultValue={company} readOnly className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Salar Name</span>
           </label>
-          <input type="text" defaultValue={user?.displayName} readOnly className="input input-bordered" />
+          <input type="text" name='name' defaultValue={user?.displayName} readOnly className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" readOnly defaultValue={user?.email} className="input input-bordered" />
+          <input type="text" name='email' readOnly defaultValue={user?.email} className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Phone</span>
           </label>
-          <input type="text"  defaultValue={phone} className="input input-bordered" />
+          <input type="text" name='phone' defaultValue={phone} className="input input-bordered" />
           <label className="label">
            
           </label>
@@ -71,7 +96,7 @@ const BookNow = ({product}) => {
         
 
          
-          <textarea className="textarea" placeholder="Bangladesh ,Dhaka ,New Market"></textarea>
+          <textarea className="textarea" name='location' placeholder="Bangladesh ,Dhaka ,New Market"></textarea>
         </div>
        
         <div className="form-control mt-6">
@@ -82,6 +107,8 @@ const BookNow = ({product}) => {
           
         </div>
       </div>
+      </form>
+   
     </div>
   
     

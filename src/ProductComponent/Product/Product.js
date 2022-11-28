@@ -40,14 +40,10 @@ const Product = () => {
                                         </div>
                                     </div>
                                 </div>
-                               
-
-                           
                              <div>
                              <BookNow  product={product}></BookNow>
                              </div>
-                            
-                               
+                          
 
                         </>)
                         }
