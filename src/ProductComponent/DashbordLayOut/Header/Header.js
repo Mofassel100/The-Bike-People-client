@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../AuthProvider/AuthProvider';
 import AdminRole from '../../../Hooks/AdminRole';
 import SellarRole from '../../../Hooks/SellarRoles';
+import Footer from '../../Footer/Footer';
 
 
 
@@ -59,7 +60,7 @@ const [isSeller]=SellarRole(user?.email)
            
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+    <Link to="deshbord" className="btn btn-ghost normal-case text-xl"> Re-Sales MOTOR Bikes</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal p-0">
@@ -70,6 +71,8 @@ const [isSeller]=SellarRole(user?.email)
    
   </div>
 </div>
+
+
         </div>
     );
 };

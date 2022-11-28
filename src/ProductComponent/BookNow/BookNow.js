@@ -75,17 +75,7 @@ const BookNow = ({product}) => {
         </div>
       </div>
     </div>
-    {/* <h3 className="font-bold text-lg text-center">{company}</h3>
-    <div className='grid '>
-    <p className="py-4">Orginal Price : {OrginalePrice}</p>
-    <p className="py-4">Sales Price : {reSalesPrice}</p>
-    <h4>Salar Name : {user?.displayName}</h4>
-    <h1>Salar Email :{user?.email}</h1> */}
-
-    {/* </div>
-    <p>Phone : {phone}</p>
-    */}
-   
+  
     
     
   </div>

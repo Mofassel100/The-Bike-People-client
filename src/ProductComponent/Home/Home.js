@@ -14,35 +14,47 @@ const Home = () => {
   })
 
   if (isLoading) {
-    return <h1>Loaserdf</h1>
+    return <>
+       <div className="flex justify-center items-center h-screen bg-green-300">
+            <div className="grid gap-2">
+                 
+                <div className="flex items-center justify-center ">Loading
+                    <div className="w-40 h-40 border-t-4 border-b-4 border-green-900 rounded-full animate-spin"></div>
+                </div>
+            </div>
+
+        </div></>
   }
  
   return (
     <div>
+      <div>
+        <h1 className="text-center text-4xl my-4 text-teal-500">Re-Sales Motor Bikes Collection</h1>
+      </div>
       <div className="carousel w-full">
         <div id="slide1" className="carousel-item relative w-full">
-          <img src="https://placeimg.com/800/200/arch" className="w-full" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/2014_Zero_Motorcycles_Zero_S.JPG/640px-2014_Zero_Motorcycles_Zero_S.JPG" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide4" className="btn btn-circle">❮</a>
             <a href="#slide2" className="btn btn-circle">❯</a>
           </div>
         </div>
         <div id="slide2" className="carousel-item relative w-full">
-          <img src="https://placeimg.com/800/200/arch" className="w-full" />
+          <img src="https://bd.gaadicdn.com/processedimages/aprilia/aprilia-sr-150/494X300/m_sr-150_11540291105.jpg?imwidth=880" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide1" className="btn btn-circle">❮</a>
             <a href="#slide3" className="btn btn-circle">❯</a>
           </div>
         </div>
         <div id="slide3" className="carousel-item relative w-full">
-          <img src="https://placeimg.com/800/200/arch" className="w-full" />
+          <img src="https://www.drivespark.com/images/2020-10/aprilia-rs-660-1.jpg" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide2" className="btn btn-circle">❮</a>
             <a href="#slide4" className="btn btn-circle">❯</a>
           </div>
         </div>
         <div id="slide4" className="carousel-item relative w-full">
-          <img src="https://placeimg.com/800/200/arch" className="w-full" />
+          <img src="https://images.hindustantimes.com/auto/img/2022/09/29/1600x900/Zero_SRS_1664461438743_1664461443823_1664461443823.jpg" className="w-full" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
             <a href="#slide3" className="btn btn-circle">❮</a>
             <a href="#slide1" className="btn btn-circle">❯</a>
@@ -77,6 +89,16 @@ const Home = () => {
         )}
 
       </div>
+      </div>
+
+      <div className='my-4'>
+        <h1 className="text-center text-3xl">RE - Sales MotorCycle</h1>
+        <p>motorcycle, any two-wheeled or, less commonly, three-wheeled motor vehicle, usually propelled by an internal-combustion engine.</p>
+        <h1 className="text-center text-3xl my-2"> MotorCycle History</h1>
+        <p>ust as the automobile was the answer to the 19th-century dream of self-propelling the horse-drawn carriage, the invention of the motorcycle created the self-propelled bicycle. The first commercial design was a three-wheeler built by Edward Butler in Great Britain in 1884. It employed a horizontal single-cylinder gasoline engine mounted between two steerable front wheels and connected by a drive chain to the rear wheel.
+
+</p>
+        
       </div>
     
 

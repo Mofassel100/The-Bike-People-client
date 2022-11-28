@@ -61,7 +61,7 @@ const googleLogin =()=>{
 
   </React.Fragment>
   return (
-    <div className="navbar " data-theme="cupcake">
+    <div   className="navbar bg-red-200" >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const googleLogin =()=>{
 
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+        <a className="btn btn-ghost normal-case text-xl text-cyan-400">RE-SALES MOTOR BIKE</a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal p-0">
