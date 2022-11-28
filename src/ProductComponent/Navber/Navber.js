@@ -18,7 +18,7 @@ const googleLogin =()=>{
         email:user.email,
         role:'buyer'
       }
-      fetch('http://localhost:4000/usersInfo',{
+      fetch('https://final-resale-project-assignment.vercel.app/usersInfo',{
         method:"POST",
         headers:{
           "content-type":"application/json"

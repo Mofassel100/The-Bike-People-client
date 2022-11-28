@@ -14,7 +14,7 @@ const MyOrders = () => {
     const [data,setData]=useState([])
     useEffect(
       ()=>{
-        fetch(`http://localhost:4000/deshbord/myorders/${user?.email}`)
+        fetch(`https://final-resale-project-assignment.vercel.app/deshbord/myorders/${user?.email}`)
         .then(res=>res.json())
         .then(data=>{
           setData(data)
@@ -28,7 +28,7 @@ const MyOrders = () => {
      
       const handleDeleteProduct =id =>{
 
-        fetch(`http://localhost:4000/SellarProduct/Delete/${id}`,{
+        fetch(`https://final-resale-project-assignment.vercel.app/SellarProduct/Delete/${id}`,{
             method:"DELETE"
         })
         .then(res=>res.json())

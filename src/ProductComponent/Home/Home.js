@@ -6,7 +6,7 @@ const Home = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['catagory'],
     queryFn: async () => {
-      const res = await fetch('http://localhost:4000/catagory')
+      const res = await fetch('https://final-resale-project-assignment.vercel.app/catagory')
       const data = await res.json()
      
       return data;

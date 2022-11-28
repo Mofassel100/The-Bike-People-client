@@ -35,7 +35,7 @@ const AddAProduct = (data) => {
 
         }
       
- fetch('http://localhost:4000/addProduct', {
+ fetch('https://final-resale-project-assignment.vercel.app/addProduct', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
         {
             path:'/products/:company',
             element:<PrivateRouter><Product></Product></PrivateRouter>,
-            loader:({params})=>fetch(`http://localhost:4000/products/${params.company}`)
+            loader:({params})=>fetch(`https://final-resale-project-assignment.vercel.app/products/${params.company}`)
         },
         {
             path:"/blogs",

@@ -14,7 +14,7 @@ const AllSellers = () => {
 
 const handleDelete =id =>{
 
-    fetch(`http://localhost:4000/userSeler/Delete/${id}`,{
+    fetch(`https://final-resale-project-assignment.vercel.app/userSeler/Delete/${id}`,{
         method:"DELETE"
     })
     .then(res=>res.json())
@@ -41,7 +41,7 @@ const handleDelete =id =>{
     useEffect(
         () => {
 
-            fetch('http://localhost:4000/userInfoUserData')
+            fetch('https://final-resale-project-assignment.vercel.app/userInfoUserData')
                 .then((res) => res.json())
                 .then(sellar => {
                     const filters = sellar.filter(sell => sell?.role === "sellar")

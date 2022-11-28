@@ -14,7 +14,7 @@ import { AuthContext } from "../AuthProvider/AuthProvider";
 //     useEffect(()=>{
 
 //         if(email){
-// fetch(`http://localhost:4000/userInfo/adminRole/${email}`)
+// fetch(`https://final-resale-project-assignment.vercel.app/userInfo/adminRole/${email}`)
 // .then(res=>res.json())
 // .then(data=>{
 
@@ -39,7 +39,7 @@ useEffect(
     ()=>{
 
         if(email){
-            fetch(`http://localhost:4000/adminRole/${email}`)
+            fetch(`https://final-resale-project-assignment.vercel.app/adminRole/${email}`)
             .then(res=>res.json())
             .then(admin=>{
                 setAdminRole(admin?.isAdminRole)
