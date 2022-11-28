@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
+import SellarRole from '../../Hooks/SellarRoles';
 import BookNow from '../BookNow/BookNow';
-import PrivateRoutes from '../../Routers/PrivateRoutes'
+import { FaBeer, FaCheck, FaMars } from 'react-icons/fa';
+
 
 const Product = () => {
+    // AiOutlineCheck
+    const {user}=useContext(AuthContext)
     const productsData = useLoaderData()
-  
+    const [isSeller]=SellarRole(user?.email)
     return (
         <div >
               <div className=''>
@@ -23,6 +28,7 @@ const Product = () => {
                                         <p>Location : {product?.location? <><p>{product?.location}</p></>: <><p>Not Fund</p></>}</p>
                                         <p>Phone: {product?.phone? <><p>{product?.phone}</p></>: <><p>Not Fund</p></>}</p>
                                         <p>Sellar Name : {product?.role? <><p>{product?.role}</p></>: <><p>Not Fund</p></>}</p>
+                                        <p>Verifi Stutas : {isSeller?<><FaCheck className='bg-green-700  '></FaCheck></>:<></>}</p>
                                         <p>Post Time : {product?.Year? <><p>{product?.Year}</p></>: <><p>Not Fund</p></>}</p>
                                         
                                         </div>

@@ -16,7 +16,15 @@ const BookNow = ({product}) => {
     const from = location.state?.from?.pathname || "/"
     
     if(loader){
-        return <h1 className='text-center'> Loader</h1>
+        return <div className="flex justify-center items-center h-screen bg-green-300">
+        <div className="grid gap-2">
+             
+            <div className="flex items-center justify-center ">Loading
+                <div className="w-40 h-40 border-t-4 border-b-4 border-green-900 rounded-full animate-spin"></div>
+            </div>
+        </div>
+
+    </div>
     }
     return (
         <div>
@@ -33,7 +41,7 @@ const BookNow = ({product}) => {
           <label className="label">
             <span className="label-text">Product Name</span>
           </label>
-          <input type="text" defaultValue={company} readOnly className="input input-bordered" />
+          <input type="text"  defaultValue={company} readOnly className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -45,7 +53,7 @@ const BookNow = ({product}) => {
           <label className="label">
             <span className="label-text">Email</span>
           </label>
-          <input type="text" defaultValue={user?.email} className="input input-bordered" />
+          <input type="text" readOnly defaultValue={user?.email} className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">

@@ -18,7 +18,7 @@ const MyOrders = () => {
         .then(res=>res.json())
         .then(data=>{
           setData(data)
-          console.log(data);
+         
           toast.success("Product Success Full")
         })
       },[user?.email])

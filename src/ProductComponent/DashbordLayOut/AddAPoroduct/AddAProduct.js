@@ -45,15 +45,23 @@ const AddAProduct = (data) => {
             .then(res => res.json())
             .then(data => {
                navigate('/deshbord/myproduct')
-               console.log(data);
+              
             })
 
     }
     if(loader){
-        return <h1>Loaders</h1>
+        return<div className="flex justify-center items-center h-screen bg-green-300">
+        <div className="grid gap-2">
+             
+            <div className="flex items-center justify-center ">Loading
+                <div className="w-40 h-40 border-t-4 border-b-4 border-green-900 rounded-full animate-spin"></div>
+            </div>
+        </div>
+
+    </div>
     }
    
-    console.log(user);
+    
     return (
         <div className=' grid justify-center items-center bg-purple-200 mx-2'>
             <form onSubmit={handleSubmit(addProductSubmit)}>

@@ -56,7 +56,7 @@ export const router = createBrowserRouter([
     errorElement:<ErrorPages></ErrorPages>,
     children:[
         {
-            path:"/deshbord/deshbord",
+            path:"/deshbord",
             element:<Deshbord></Deshbord>
         },
         {
