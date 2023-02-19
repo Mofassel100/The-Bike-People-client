@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -8,8 +8,15 @@ const BookNow = ({product}) => {
     const {user,loader}=useContext(AuthContext)
     console.log(product);
     const toasts = ()=>{
-      toast.success('Booked')
+      toast.success('Booked Sucess Full')
       navigate(from,{replace:true})
+
+    }
+    const [closemodal ,setCloseModale]= useState(true)
+    const closeModale = ()=>{
+      navigate(from,{replace:true})
+setCloseModale(false)
+
     }
     const navigate = useNavigate()
     const location = useLocation()
@@ -54,9 +61,9 @@ const BookNow = ({product}) => {
   
     }
     return (
-        <div>
+        <div className='text-black font-bold'>
         
-<input type="checkbox" id="bookNow" className="modal-toggle" />
+<input type="checkbox"  id="bookNow" className="modal-toggle" />
 <div className="modal">
   <div className="modal-box">
     <div>
@@ -103,6 +110,7 @@ const BookNow = ({product}) => {
           <Link >
           
           <button  onClick={toasts}  className="btn btn-primary"> Submit</button>
+          <button onClick={closeModale}   className="btn ml-5 btn-error text-black"> Cencel</button>
           </Link>
           
         </div>

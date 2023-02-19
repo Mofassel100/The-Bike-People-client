@@ -1,93 +1,145 @@
 [
     {
-      "reSalesPrice": "$182,152.36",
-      "OrginalePrice": "$256,145.66",
-      "picture": "https://images.prismic.io/zero-cms-disco/42f383e6-3690-48b6-9e18-b691d8f32c0a_S_7.2_360_00.png?auto=compress,format&rect=0,0,2560,1600&w=2560&h=1600",
-      "age": "4 Month",
-      "eyeColor": "green",
-      "name": "Zero Motorcycles",
-      "gender": "female",
-      "company": "ZERO",
-      "email": "zelmarivera@corepan.com",
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRULVJm4aClPJi5sadLL7n3nR5-qwCrDOW8A&usqp=CAU",
+      "positionName": "Frontend Developer",
+      "companyName": "NET Developer (Fresher)",
+      "location": " Dhaka,  Bangladesh",
+      "logo": "",
+      "brand":"Fresher Job",
+      "time":"Full-time",
       "phone": "+1 (992) 539-3560",
-      "description": "Adventure bikes are currently the hottest in the segment, and the Zero DSR/X electric motorcycle is such a great fit.",
-      "latitude": 89.579903,
-      "longitude": -136.287663
+      "description": "We are looking for a fresh developer having some exposure to object oriented programming with focus on .NET environment and tools. As a fresher, you will be working in a software development team of 10-12 members learning the techniques and principles of database design, front-end and back-end code development."
+     
     },
     {
-      "reSalesPrice": "$296,145.20",
-      "OrginalePrice": "$517,532.00",
-      "picture": "https://www.webbikeworld.com/wp-content/uploads/2020/10/image2.png",
-      "age":  " 6 Month",
-      "eyeColor": "green",
-      "name": "Zero Motorcycles",
-      "gender": "male",
-      "company": "ZERO",
-      "email": "matthewsnixon@roughies.com",
-      "phone": "+1 (884) 478-2639",
-      "description": " Zero Motorcycles has been making quality electric motorcycles for years now, and the company continues to pick up steam. It’s the latest addition is the SR/S sport-touring bike, but as you can see below, there’s a slew of great electric motorcycles in its lineup.",
-      "latitude": 74.413742,
-      "longitude": 158.695624
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LgJSArPd7e3VYCFkwY2g6XM4qhJN7LKjG1svB71GmV56nWsrLfcD8AQUf2ubDM7rUXE&usqp=CAU",
+      "positionName": "Junior Engineer",
+      "companyName": "Technical Sales & Support Engineere",
+      "location": " Dhaka,  Bangladesh",
+      "logo": "",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Person should have good knowledge about Diesel Generator, Natural Gas Generator, High Voltage Sub-Station, Lift ,Energy Meter, Measuring Instrument, VFD,PLC, Instrument & Control System Products and related spare parts"
+     
     },
     {
-      "reSalesPrice": "$199,598.60",
-      "OrginalePrice": "$473,041.20",
-      "picture": "https://autoportal.com/img/models/bb/a/rs125.jpg",
-      "age": "7 Month",
-      "eyeColor": "green",
-      "name": "APRILIA BIKE",
-      "gender": "male",
-      "company": "APRILIA",
-      "email": "longhowe@bleendot.com",
-      "phone": "+1 (996) 445-3556",
-      "description": "The leading Italian bike manufacturing company –the Aprilia has come as a big surprise by launching the latest Aprilia RS 150 and the Aprilia Tuono bike series at the Auto Expo 2018. The all-new Aprilia RS 150 has made its global debut at the Auto Expo 2018 in the Indian markets. With its unexpected release, the Aprilia RS 150 seems to be the downsized version of the classic RSV4 series and even sports the same design features.",
-      "latitude": -26.582479,
-      "longitude": 112.081382
+      "picture": "https://cdn1.vectorstock.com/i/1000x1000/03/15/business-meeting-isometric-3d-icon-vector-17990315.jpg",
+      "positionName": "Junior office for Markinting",
+      "companyName": "Marketing Executive (Interior & Furniture Marketing)",
+      "location": " Dhaka,  Bangladesh",
+      "logo": "",
+      "brand":"Fresher Job",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Gravity Interior Design is a well known Organization in Interior & Furniture Industry sector in Bangladesh. We produce quality Home interior & Furniture, Corporate Furniture, Metal Furniture and Interior Design in our own Factory."
+     
     },
     {
-      "reSalesPrice": "$161,726.85",
-      "OrginalePrice": "$382,210.09",
-      "picture": "https://www.cartoq.com/wp-content/uploads/2018/12/aprilia-bike-mod-featured.jpg",
-      "age": "9 Month",
-      "eyeColor": "blue",
-      "name": "Aprilia Motorcycles",
-      "gender": "female",
-      "company": "APRILIA",
-      "email": "cristinajackson@interodeo.com",
-      "phone": "+1 (907) 593-3457",
-      "description": "When we talk about modified bikes, the usual scene is about modified Enfield, Pulsars, Dukes etc. The mod-jobs range from being purely aesthetic to full blown performance mods. Lately, some examples of modified scooters too have surfaced but they are nothing to write home about. The reason for scooters not making it to big leagues of modification is because there are a limited range of work that can be done on them.",
-      "latitude": -64.500277,
-      "longitude": 159.402694
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGCCg1h4yFOVFd_ZcbOPAFaGqrO923BX0zTKfrTT0rcTKdrtLE9lSUjobw4U5Yh92W_s&usqp=CAU",
+      "positionName": "FullStack Developer",
+      "companyName": "Agumentik Group of Companies",
+      "location": " Bengaluru",
+      "logo": "",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "We are the fastest growing startup in Andhra Pradesh for designing Software, Website Development, App Development, Animation, Game Designing and Digital Marketing Era"
+     
     },
     {
-      "reSalesPrice": "$150,809.62",
-      "OrginalePrice": "$250,369.10",
-      "picture": "https://www.drivespark.com/images/2022-07/tvs-ronin-44.jpg",
-      "age": "5 Month",
-      "eyeColor": "brown",
-      "name": "TVS Motors Bikes",
-      "gender": "male",
-      "company": "TVS",
-      "email": "martinterry@electonic.com",
-      "phone": "+1 (888) 421-3862",
-      "description": "TVS Motor Company is part of the TVS Group and was founded in 1978. The TVS Group was originally formed in 1911 by T V Sundaram Iyengar. TVS Motor Company introduced their first two-wheeler, the TVS 50 moped, in 1980 and entered into domestic racing with it in 1984. In 1987, TVS Racing division was born.",
-      "latitude": -3.226762,
-      "longitude": -151.789818
+      "picture": "https://img.freepik.com/free-vector/business-meeting-office-illustration-concept_52683-26610.jpg?w=2000",
+      "positionName": "Junior Engineer",
+      "companyName": "Crestaerospace Technologies Private Limited",
+      "location": "Bangalore",
+      "logo": "",
+      "brand":"Fresher Job",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "We are a team of Aerospace Domain specialists and our focus areas are Happy Customers and Happy Employees. We put great emphasis on Quality of Work and Deliverable so that every one is satisfied.e"
+     
     },
     {
-      "reSalesPrice": "$186,370.63",
-      "OrginalePrice": "$349,142.09",
-      "picture": "https://www.mototechindia.com/wp-content/uploads/2022/03/tvs-adventure-310.jpg",
-      "age": 29,
-      "eyeColor": "green",
-      "name": "TVS Motors Bikes",
-      "gender": "female",
-      "company": "TVS",
-      "email": "lupehorn@permadyne.com",
-      "phone": "+1 (804) 458-2393",
-      "description": "TVS is planning to launch a new adventure bike in the Indian market. This upcoming bike will be the all-new TVS Adventure 310. It will be based on the same BS6 compliant single-cylinder, liquid-cooled engine as its sports sibling the Apache RR310. It will come with a 6-speed transmission and it will boast features like ",
-      "latitude": 42.880537,
-      "longitude": -67.160908
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3aR1lCMDNYFZA2JDpLNTKqbND7fXacU-GHgGkgq8G3EH0HAhKSjpGPfZ85GJt4bQBY5E&usqp=CAU",
+      "positionName": "Junior Officer for Designer",
+      "companyName": "Senior Visualizer/Graphic Designer",
+      "location": "Dhanmondi, Dhaka",
+      "logo": "",
+      "brand":"Fresher Job",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "xcellent knowledge in visualization.Excellent and Advanced knowledge on Adobe Photoshop, Illustrator, 3d Max, other Graphic related software"
+     
+    },
+    {
+      "picture": "https://c8.alamy.com/comp/2H0KXBH/writing-displaying-text-best-workplace-conceptual-photo-ideal-company-to-work-with-high-compensation-stress-free-online-jobs-and-working-remotely-con-2H0KXBH.jpg",
+      "positionName": "Angular Developer ( Full Stack)",
+      "companyName": "Midas Software Solutions LTD  ",
+      "location": "Cyberjaya, Malaysi",
+      "logo": "https://media.licdn.com/dms/image/C4D0BAQHS9rquUQIzcg/company-logo_100_100/0/1657251828147?e=1684972800&v=beta&t=KFrVgaEhrdIdnSt7xvPJClzf2ApGt-y4WQ4vkg45XR4",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "As a Tech Lead at Deriv, you will be responsible for driving the technical direction of your team, assisting senior leaders on strategic roadmaps and driving priorities."
+     
+    },
+  
+    {
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZgqgclVpzEwxgPMxOXltAIHFg4C-jKEOsq-V0F_QwQAsWjkAqwgIFIMqs6uuFO_rgkbU&usqp=CAU",
+      "positionName": "React Native Developer",
+      "companyName": "BrightDev",
+      "location": "Bangladesh Remote",
+      "logo": "https://media.licdn.com/dms/image/C4E0BAQFsFO7g2IHLPw/company-logo_200_200/0/1672920710888?e=1684972800&v=beta&t=ITyTMxaBKE6Mu98_4CRWS11KzzukIEUCkshS9V5pAa4",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+     
+    },
+    {
+      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PVz80BA3L-e3yfFLMpJsa2DioaAX9tCerLYrydgOEZVCGabDEiWaDXMSwqLQiwBeH_s&usqp=CAU",
+      "positionName": "Web Search Evaluator",
+      "companyName": "Appen",
+      "location": "Nator, Rajshahi, Bangladesh Remote ",
+      "logo": "https://media.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1684972800&v=beta&t=asSi5K7_7c_YWjLeKj90AXl-X7QWXaHbHpnv-3TJYCg",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+     
+    },
+    {
+      "picture": "https://devonjobs-uploads.s3.eu-west-2.amazonaws.com/633498717277/Finding-a-job.jpeg",
+      "positionName": "Senior Software Engineer",
+      "companyName": "SetSchedule",
+      "location": "Dhaka, Bangladesh Remote",
+      "logo": "https://media.licdn.com/dms/image/C560BAQF5_cfA_rl2-Q/company-logo_100_100/0/1615234152233?e=1684972800&v=beta&t=Z_XxVXQ04ZoH5HA7QhKv5oiePH-I4bwzSQ4OktVVNzk",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Are you a passionate developer who wants to build products that have a positive impact in the tech industry, or potentially the world? Are you an engineer who wants to take their career to the next level by mentoring and coaching a team of developers ?  "
+     
+    },
+    {
+      "picture": "https://assets-global.website-files.com/602a97fb7ff89c083c49cc06/611d217a2985b2402359e4c5_Screenshot%202021-08-18%20at%2016.04.01.png",
+      "positionName": "Empleo Junior Backend Developer",
+      "companyName": "Trabajo",
+      "location": "Bangladesh Remote",
+      "logo": "https://media.licdn.com/dms/image/D4D0BAQGFJMkBlTYwMA/company-logo_100_100/0/1667236443972?e=1684972800&v=beta&t=ZBoP4eKDwYKTdZ34XGX962La7TlR9hFeThf27MWHKXs",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Traditional recruiting wasn’t designed for today’s software-first world. The old model is simply too slow, doesn’t allow for deep vetting and takes the control and ownership out of your hands."
+     
+    },
+    {
+      "picture": "https://www.firstachieve.com/media/1082/summer-job-seekers-first-achieve.jpg",
+      "positionName": "Senior NodeJS Software Engineer",
+      "companyName": "BrightDev",
+      "location": "Dhaka, Bangladesh",
+      "logo": "https://media.licdn.com/dms/image/C560BAQExVwDLJIjW3A/company-logo_100_100/0/1519879432158?e=1684972800&v=beta&t=p71nk88_11Yx7whcufNmEbhMYcTY-GAl1C_yV3i8_J4",
+      "brand":"Experienced",
+      "time":"Full-time",
+      "phone": "+1 (992) 539-3560",
+      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+     
     }
-   
   ]

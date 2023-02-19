@@ -3,11 +3,13 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { FcGoogle } from "react-icons/fc";
+
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Register = () => {
-    const { NewRegisterUser, UpdateUsersProfils,loader } = useContext(AuthContext)
+    const { NewRegisterUser, UpdateUsersProfils,loader,googleLogIn } = useContext(AuthContext)
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -74,41 +76,41 @@ const Register = () => {
 
 
     }
-    if(loader){
+    // if(loader){
 
-        return <h1>Loader</h1>
-    }
+    //     return <h1>Loader</h1>
+    // }
   
     return (
-        <div className=' grid justify-center items-center bg-purple-200 mx-2'>
+        <div className=' grid justify-center items-center bg-black text-white mx-2'>
             <form onSubmit={handleSubmit(hadleLogingSubmit)}>
-                <p className='text-2xl '>Register Form</p>
+                <p className='text-2xl text-center '>Register </p>
 
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Name</span>
+                        <span className="label-text text-white font-bold">Name</span>
 
                     </label>
-                    <input type="text" className="input input-bordered w-full max-w-xs" {...register("name", { required: "Name in required" })} placeholder="Enter Your name" />
+                    <input type="text" className="input font-bold  input-bordered w-full max-w-xs" {...register("name", { required: "Name in required" })} placeholder="Enter Your name" />
 
 
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Photo URL</span>
+                        <span className="label-text font-bold text-white">Photo URL</span>
 
                     </label>
-                    <input type="text" className="input input-bordered w-full max-w-xs" {...register("photoURL")} placeholder="Enter Your photo URL" />
+                    <input type="text" className="input font-bold input-bordered w-full max-w-xs" {...register("photoURL")} placeholder="Enter Your photo URL" />
 
 
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Email</span>
+                        <span className="label-text text-white font-bold">Email</span>
 
                     </label>
-                    <input type="email" className="input input-bordered w-full max-w-xs" {...register("email", { required: "Email Address in required" })} placeholder="Enter Your Email" />
+                    <input type="email" className="input fond-bold input-bordered w-full max-w-xs" {...register("email", { required: "Email Address in required" })} placeholder="Enter Your Email" />
                     <br />
                     {/* 
                     {error.email && <p className='text-red-700' role="alert"> {errors.email?.message}</p>} */}
@@ -117,7 +119,7 @@ const Register = () => {
 
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text text-white font-bold">Password</span>
 
                     </label>
                     <input type="Password" className="input input-bordered w-full max-w-xs" {...register("password", {
@@ -129,13 +131,18 @@ const Register = () => {
 
 
                 </div>
-                <div className=''>
+                <div className='flex'>
                       
-                <select required className='px-5 py-3' {...register("role")}>
+                <select required className='px-5 font-bold text-black py-3' {...register("role")}>
         <option className='p-3 ' value="buyer">Buyers</option>
         <option className='p-3' value="sellar">sellars</option>
         
-      </select>
+      </select> 
+      <div className='grid justify-center items-center ml-11'>
+        <button onClick={googleLogIn}> <FcGoogle className='text-5xl'/>  </button>
+      {/* <Link >  </Link> */}
+      </div>
+     
 
                 </div>
 

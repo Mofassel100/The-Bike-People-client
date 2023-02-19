@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
+
 const Navber = () => {
   const { LogOutUser, user,googleLogIn } = useContext(AuthContext)
 
@@ -42,6 +43,8 @@ const googleLogin =()=>{
 }
 
   const myInfo = <React.Fragment>
+<li ><Link to='/blogs'>Blog</Link></li>
+
     {user?.uid ?
       <>
         <li><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
@@ -51,9 +54,35 @@ const googleLogin =()=>{
       <>
         <li> <Link to='login'>Login</Link></li>
         <li><Link to='register'>Register</Link></li>
-        <li><button onClick={googleLogin} >Google Login</button></li>
+       
       </>}
     <li ><Link to='/blogs'>Blogs</Link></li>
+    {/* <div className="relative group">
+              <div className="flex items-center cursor-pointer py-1">
+                <button className="bg-blue p-3 inline-flex justify-center items-center ">
+                  <span>Features</span>
+                  <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="items-center absolute  invisible group-hover:visible">
+                <ul className="list-reset text-black">
+                  <li><Link to="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li><Link to="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
+                  <li><Link to="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
+                  <li> <Link className="px-2 py-2   block" to='/Features/features'>Portfolios</Link></li>
+                  <li> <Link className="px-2 py-2   block" to='/AllProjects/AllProjects'>My Projects</Link></li>
+
+                  <li> <Link className="px-2 py-2   block" to='/integration/integrations'>Integration</Link></li>
+                  <li> <Link className="px-2 py-2   block" to="/myGoals">Goals</Link></li>
+
+
+                </ul>
+
+              </div>
+
+            </div> */}
   </React.Fragment>
   const deshbord = <React.Fragment>
 
@@ -61,20 +90,47 @@ const googleLogin =()=>{
 
   </React.Fragment>
   return (
-    <div   className="navbar bg-red-200" >
+    <div   className="navbar bg-black text-white font-bold" >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
           </label>
-          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52">
             {myInfo}
 
           </ul>
         </div>
-        <a className="btn btn-ghost normal-case text-xl text-cyan-400">RE-SALES MOTOR BIKE</a>
+        <a className="btn btn-ghost normal-case text-xl text-lime-600 ">RS MOTOR BIKE</a>
       </div>
       <div className="navbar-center hidden lg:flex">
+
+      <div className="relative group">
+              <div className="flex items-center cursor-pointer py-1">
+                <button className="bg-blue p-3 inline-flex justify-center items-center ">
+                  <span>Features</span>
+                  <svg className="-mr-1 ml-2 h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                  </svg>
+                </button>
+              </div>
+              <div className="items-center absolute  invisible group-hover:visible">
+                <ul className="list-reset text-black">
+                  <li><Link to="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li><Link to="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
+                  <li><Link to="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
+                  <li> <Link className="px-2 py-2   block" to='/Features/features'>Portfolios</Link></li>
+                  <li> <Link className="px-2 py-2   block" to='/AllProjects/AllProjects'>My Projects</Link></li>
+
+                  <li> <Link className="px-2 py-2   block" to='/integration/integrations'>Integration</Link></li>
+                  <li> <Link className="px-2 py-2   block" to="/myGoals">Goals</Link></li>
+
+
+                </ul>
+
+              </div>
+
+            </div>
         <ul className="menu menu-horizontal p-0">
           {
             myInfo

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 
 const AllBuyers = () => {
      
@@ -44,12 +46,12 @@ const handleDelete =id =>{
     return (
         <div>
               <div>
-            <h1 className='text-center my-6'> All SEllars Total :  {buyers?.length}</h1>
+            <h1 className=''> All SEllars Total :  {buyers?.length}</h1>
 
             {buyers?.map(buyer=><>
             
-                <div className="overflow-x-auto w-full">
-  <table className="table w-full">
+                <div className="">
+  {/* <table className="table w-full">
    
     <thead>
       <tr>
@@ -67,25 +69,25 @@ const handleDelete =id =>{
      
       <tr>
         <th>
-        <button onClick={()=>handleDelete(buyer?._id)} className='btn btn-warning'>Delete</button>
+      
          
          </th>
         <td>
           <div className="flex items-center space-x-3">
           
-            {buyer?.name}
+           
             
           </div>
         </td>
         <td>
-         {buyer?.email}
+        
           <br/>
           <span className="badge badge-ghost badge-sm">Sellar Email</span>
         </td>
        
         <th>
         <div>
-              <div className="font-bold mx-2">{buyer?.role}</div>
+              <div className="font-bold mx-2"></div>
               
             </div>
         </th>
@@ -97,7 +99,26 @@ const handleDelete =id =>{
    
    
     
-  </table>
+  </table> */}
+  <Table >
+  <Thead>
+    <Tr>
+      <Th></Th>
+      <Th></Th>
+      <Th>{buyer[2]}</Th>
+      <Th>{buyer [4]}</Th>
+    </Tr>
+    
+  </Thead>
+  <Tbody>
+    <Tr>
+      <Td> {buyer?.name}</Td>
+      <Td> {buyer?.email}</Td>
+      <Td>{buyer?.role}</Td>
+      <Td>  <button onClick={()=>handleDelete(buyer?._id)} className='btn btn-warning'>Delete</button></Td>
+    </Tr>
+  </Tbody>
+</Table>
 </div>
             
             </>)}
