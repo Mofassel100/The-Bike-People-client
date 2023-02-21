@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import AdminRole from '../../Hooks/AdminRole';
+import SellarRole from '../../Hooks/SellarRoles';
 
 
 const Navber = () => {
@@ -41,22 +43,23 @@ const googleLogin =()=>{
     toast.error(error.message)
   })
 }
-
+const [isAdminRole]= AdminRole(user?.email)
+const [isSeller]= SellarRole(user?.email)
   const myInfo = <React.Fragment>
-<li ><Link to='/blogs'>Blog</Link></li>
+<li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
 
     {user?.uid ?
       <>
-        <li><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
-        <li><Link >{user?.displayName}</Link></li>
+        <li  className='px-2 mx-2 hover:text-lime-400'><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
+        <li  className='px-2 mx-2 hover:text-lime-400'><Link >{user?.displayName}</Link></li>
       </>
       :
       <>
-        <li> <Link to='login'>Login</Link></li>
-        <li><Link to='register'>Register</Link></li>
+        <li  className='px-2 mx-2 hover:text-lime-400'> <Link to='login'>Login</Link></li>
+        <li  className='px-2 mx-2 hover:text-lime-400'><Link to='register'>Register</Link></li>
        
       </>}
-    <li ><Link to='/blogs'>Blogs</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
     {/* <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
@@ -83,10 +86,14 @@ const googleLogin =()=>{
               </div>
 
             </div> */}
+
+
+            {isAdminRole &&  <li ><Link to='/deshbord'>Deshbord</Link></li>}
+            {isSeller &&  <li ><Link to='/deshbord'>Deshbord</Link></li>}
   </React.Fragment>
   const deshbord = <React.Fragment>
 
-    <li ><Link to='/deshbord'>Deshbord</Link></li>
+   
 
   </React.Fragment>
   return (
@@ -105,7 +112,7 @@ const googleLogin =()=>{
       </div>
       <div className="navbar-center hidden lg:flex">
 
-      <div className="relative group">
+      {/* <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
                   <span>Features</span>
@@ -130,22 +137,15 @@ const googleLogin =()=>{
 
               </div>
 
-            </div>
+            </div> */}
         <ul className="menu menu-horizontal p-0">
           {
             myInfo
           }
         </ul>
       </div>
-      <div className="navbar-end">
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal p-0">
-            {
-              deshbord
-            }
-          </ul>
-        </div>
-
+      <div className="">
+        {/* <div className="navbar-end hidden lg:flex">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -154,6 +154,17 @@ const googleLogin =()=>{
             {deshbord}
           </ul>
         </div>
+          
+        </div> */}
+        {/* <div className="dropdown">
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+          </label>
+          <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+            {deshbord}
+          </ul>
+        </div>
+     */}
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ import MyOrders from "../ProductComponent/DashbordLayOut/MyOrders/MyOrders";
 import AdminRoute from "./AdminPrivateRoute";
 import SellarPrivateRoute from "./SellarPrivateRoute";
 import BuyerPrivateRoute from "./BuyerPrivateRoute";
+import Aboute from "../ProductComponent/About/Aboute";
 
 
 
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
         {
             path:"/blogs",
             element:<Blogs></Blogs>
+        },
+        {
+            path:"/about",
+            element:<Aboute></Aboute>
         }
     ]
 },
