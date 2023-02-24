@@ -5,65 +5,56 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 import AdminRole from '../../Hooks/AdminRole';
 import SellarRole from '../../Hooks/SellarRoles';
 import ContactModal from '../ContactUS/ContactModal';
-
-
 const Navber = () => {
-  const { LogOutUser, user,googleLogIn } = useContext(AuthContext)
+  const { LogOutUser, user, googleLogIn } = useContext(AuthContext)
+  const googleLogin = () => {
+    googleLogIn()
+      .then(
+        result => {
+          const user = result.user;
+          const usersdata = {
+            name: user.displayName,
+            email: user.email,
+            role: 'buyer'
+          }
+          fetch('https://final-resale-project-assignment.vercel.app/usersInfo', {
+            method: "POST",
+            headers: {
+              "content-type": "application/json"
+            },
+            body: JSON.stringify(usersdata)
+          })
+            .then(result => {
+              toast.success('Google Login Succefull')
 
-const googleLogin =()=>{
-
-  googleLogIn()
-  .then(
-    result=>{
-      const user = result.user;
-
-      const usersdata ={
-        name:user.displayName,
-        email:user.email,
-        role:'buyer'
-      }
-      fetch('https://final-resale-project-assignment.vercel.app/usersInfo',{
-        method:"POST",
-        headers:{
-          "content-type":"application/json"
-        },
-        body:JSON.stringify(usersdata)
-      })
-      .then(result =>{
-        toast.success('Google Login Succefull')
-
-        console.log(result);
-      })
-      .catch(error=>{
+              console.log(result);
+            })
+            .catch(error => {
+              toast.error(error.message)
+            })
+        }
+      )
+      .catch(error => {
         toast.error(error.message)
       })
-    }
-
-  )
-  .catch(error=>{
-    toast.error(error.message)
-  })
-}
-const [isAdminRole]= AdminRole(user?.email)
-const [isSeller]= SellarRole(user?.email)
+  }
+  const [isAdminRole] = AdminRole(user?.email)
+  const [isSeller] = SellarRole(user?.email)
   const myInfo = <React.Fragment>
-
-<li className='px-2 mx-2 hover:text-lime-400'><Link to='/'>Home</Link></li>
-   
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
-      <li className='px-2 mx-2 hover:text-lime-400'><label htmlFor="my-modal-4" className="">Contact Us</label></li>
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
-
-      {user?.uid ?
+    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/'>Home</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400'><label htmlFor="my-modal-4" className="">Contact Us</label></li>
+    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
+    {user?.uid ?
       <>
-        <li  className='px-2 mx-2 hover:text-lime-400'><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
-        <li  className='px-2 mx-2 hover:text-lime-400'><Link >{user?.displayName}</Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400'><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400'><Link >{user?.displayName}</Link></li>
       </>
       :
       <>
-        <li  className='px-2 mx-2 hover:text-lime-400'> <Link to='login'>Login</Link></li>
-        <li  className='px-2 mx-2 hover:text-lime-400'><Link to='register'>Register</Link></li>
-       
+        <li className='px-2 mx-2 hover:text-lime-400'> <Link to='login'>Login</Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400'><Link to='register'>Register</Link></li>
+
       </>}
     {/* <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
@@ -91,18 +82,13 @@ const [isSeller]= SellarRole(user?.email)
               </div>
 
             </div> */}
-
-
-            {isAdminRole &&  <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
-            {isSeller &&  <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
+    {isAdminRole && <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
+    {isSeller && <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
   </React.Fragment>
   const deshbord = <React.Fragment>
-
-   
-
   </React.Fragment>
   return (
-    <div   className="navbar bg-black text-white font-bold" >
+    <div className="navbar bg-black text-white font-bold" >
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -110,14 +96,13 @@ const [isSeller]= SellarRole(user?.email)
           </label>
           <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow  rounded-box w-52">
             {myInfo}
-
           </ul>
         </div>
         <a className="btn btn-ghost normal-case text-xl text-lime-600 ">RS MOTOR BIKE</a>
       </div>
       <div className="navbar-center hidden lg:flex">
 
-      {/* <div className="relative group">
+        {/* <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
                   <span>Features</span>

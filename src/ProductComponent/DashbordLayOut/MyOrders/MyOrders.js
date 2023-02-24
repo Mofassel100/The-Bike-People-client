@@ -9,7 +9,6 @@ const MyOrders = () => {
         .then(res=>res.json())
         .then(data=>{
           setData(data)
-         
           toast.success("Product Success Full")
         })
       },[])
@@ -21,7 +20,6 @@ const MyOrders = () => {
                     </>
                 )
             }
-            
             
         </div>
     );

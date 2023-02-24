@@ -20,77 +20,73 @@ import SellarPrivateRoute from "./SellarPrivateRoute";
 import BuyerPrivateRoute from "./BuyerPrivateRoute";
 import Aboute from "../ProductComponent/About/Aboute";
 import ContacUs from "../ProductComponent/ContactUS/ContacUs";
-
-
-
-
 export const router = createBrowserRouter([
     {
-    path:"/",
-    element:<Main></Main>,
-    errorElement:<ErrorPages></ErrorPages>,
-    children:[
-        {
-            path:"/",
-            element:<Home></Home>
-        },
-        {
-            path:"login",
-            element:<Login></Login>
-        },
-        {
-            path:"register",
-            element:<Register></Register>
-        },
-        {
-            path:'/products/:company',
-            element:<PrivateRouter><Product></Product></PrivateRouter>,
-            loader:({params})=>fetch(`https://final-resale-project-assignment.vercel.app/products/${params.company}`)
-        },
-        {
-            path:"/blogs",
-            element:<Blogs></Blogs>
-        },
-        {
-            path:"/about",
-            element:<Aboute></Aboute>
-        },
-        {
-            path:"/contact",
-            element:<ContacUs></ContacUs>
-        }
-    ]
-},
-{
-    path:"/deshbord",
-    element:<PrivateRouter><DeshbordLayOut></DeshbordLayOut></PrivateRouter>,
-    errorElement:<ErrorPages></ErrorPages>,
-    children:[
-        {
-            path:"/deshbord",
-            element:<Deshbord></Deshbord>
-        },
-        {
-           path:"/deshbord/addproduct",
-           element:<SellarPrivateRoute><AddAProduct></AddAProduct></SellarPrivateRoute> 
-        },
-        {
-            path:"/deshbord/myproduct",
-            element:<SellarPrivateRoute><MyProduct></MyProduct></SellarPrivateRoute>
-        },
-        {
-            path:'deshbord/allsellers',
-            element:<AdminRoute><AllSellers></AllSellers></AdminRoute>
-        },
-        {
-            path:"deshbord/allbuyers",
-            element:<AdminRoute><AllBuyers></AllBuyers></AdminRoute>
-        },
-        {
-            path:"deshbord/myorders",
-            element:<BuyerPrivateRoute><MyOrders></MyOrders></BuyerPrivateRoute>
-        }
-    ]
+        path: "/",
+        element: <Main></Main>,
+        errorElement: <ErrorPages></ErrorPages>,
+        children: [
+            {
+                path: "/",
+                element: <Home></Home>
+            },
+            {
+                path: "login",
+                element: <Login></Login>
+            },
+            {
+                path: "register",
+                element: <Register></Register>
+            },
+            {
+                path: '/products/:company',
+                element: <PrivateRouter><Product></Product></PrivateRouter>,
+                loader: ({ params }) => fetch(`https://final-resale-project-assignment.vercel.app/products/${params.company}`)
+            },
+            {
+                path: "/blogs",
+                element: <Blogs></Blogs>
+            },
+            {
+                path: "/about",
+                element: <Aboute></Aboute>
+            },
+            {
+                path: "/contact",
+                element: <ContacUs></ContacUs>
+            }
+        ]
+    },
+    {
+        path: "/deshbord",
+        element: <PrivateRouter><DeshbordLayOut></DeshbordLayOut></PrivateRouter>,
+        errorElement: <ErrorPages></ErrorPages>,
+        children: [
+            {
+                path: "/deshbord",
+                element: <Deshbord></Deshbord>
+            },
+            {
+                path: "/deshbord/addproduct",
+                element: <SellarPrivateRoute><AddAProduct></AddAProduct></SellarPrivateRoute>
+            },
+            {
+                path: "/deshbord/myproduct",
+                element: <SellarPrivateRoute><MyProduct></MyProduct></SellarPrivateRoute>
+            },
+            {
+                path: 'deshbord/allsellers',
+                element: <AdminRoute><AllSellers></AllSellers></AdminRoute>
+            },
+            {
+                path: "deshbord/allbuyers",
+                element: <AdminRoute><AllBuyers></AllBuyers></AdminRoute>
+            },
+            {
+                path: "deshbord/myorders",
+                element: <BuyerPrivateRoute><MyOrders></MyOrders></BuyerPrivateRoute>
+            }
+        ]
     }
-    
+
 ])

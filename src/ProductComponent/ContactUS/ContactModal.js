@@ -9,13 +9,10 @@ const ContactModal = () => {
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my-modal-4" className="modal-toggle" />
 <label htmlFor="my-modal-4" className="modal cursor-pointer">
-
   <label className="modal-box relative" htmlFor="">
     <div className='grid justify-end'>
     <label htmlFor="my-modal-4" className="btn   btn-sm btn-circle ">✕</label>
     </div>
-
-   
     <div>
         <div className='flex justify-between my-3 font-bold'> 
            <p> Mofassl</p>

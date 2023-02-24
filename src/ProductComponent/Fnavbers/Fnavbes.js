@@ -3,8 +3,6 @@ import React from 'react';
 const Fnavbes = () => {
     return (
         <div>
-            
-
             <nav className="bg-white border-gray-200 dark:border-gray-600 dark:bg-gray-900">
     <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
         <a href="https://flowbite.com" className="flex items-center">
@@ -80,8 +78,6 @@ const Fnavbes = () => {
         </div>
     </div>
 </nav>
-
-
         </div>
     );
 };
