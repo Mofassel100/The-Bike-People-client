@@ -30,7 +30,9 @@ export default function Example() {
   };
  
   return (
-    <Fragment >
+    <div className="grid px-6 py-10 w-100 justify-center items-center">
+      <div className="w-100">
+      <Fragment  >
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>
         What are the different ways to manage a state in a React application?
@@ -81,5 +83,8 @@ All three frameworks provide a solid basis for state-of-the-art front ends. Neve
         </AccordionBody>
       </Accordion>
     </Fragment>
+      </div>
+    </div>
+  
   );
 }
