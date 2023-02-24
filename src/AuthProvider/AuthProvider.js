@@ -63,7 +63,6 @@ const AuthProvider = ({ children }) => {
             <AuthContext.Provider value={allInfoData}>
                 {children}
             </AuthContext.Provider>
-
         </div>
     );
 };

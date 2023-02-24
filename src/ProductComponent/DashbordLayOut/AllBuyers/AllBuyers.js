@@ -1,132 +1,67 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table'
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
-
+import { AiFillDelete } from "react-icons/ai";
 const AllBuyers = () => {
-     
-    const [buyers, setBuyers] = useState([])
-    const [loader, setLoader] = useState(true)
-
-const handleDelete =id =>{
-
-    fetch(`https://final-resale-project-assignment.vercel.app/userBuyer/Delete/${id}`,{
-        method:"DELETE"
+  const [buyers, setBuyers] = useState([])
+  const [loader, setLoader] = useState(true)
+  const handleDelete = id => {
+    fetch(`https://final-resale-project-assignment.vercel.app/userBuyer/Delete/${id}`, {
+      method: "DELETE"
     })
-    .then(res=>res.json())
-    .then(deletes =>{
+      .then(res => res.json())
+      .then(deletes => {
         const confirms = window.confirm("Are You Sure Delete")
-        if(deletes.deletedCount > 0 &&  confirms){  
-                
-                const Buyerrremaining = buyers.filter(remain => remain._id !==id)
-                toast.error("delete Succes Fully Items Removes")
-                 setBuyers(Buyerrremaining)  
+        if (deletes.deletedCount > 0 && confirms) {
+          const Buyerrremaining = buyers.filter(remain => remain._id !== id)
+          toast.error("delete Succes Fully Items Removes")
+          setBuyers(Buyerrremaining)
         }
-        else{
-            toast.error('Not Delete item')
+        else {
+          toast.error('Not Delete item')
         }
-    })
-}
-    useEffect(
-        () => {
-
-            fetch('https://final-resale-project-assignment.vercel.app/userInfoUserData')
-                .then((res) => res.json())
-                .then(buyer => {
-                    const filters = buyer.filter(buyer => buyer?.role === "buyer")
-                    setLoader(false)
-                   setBuyers(filters)
-
-                    console.log(buyer);
-                })
-        }
-        , [])
-
-    
-    return (
-        <div>
-              <div>
-            <h1 className=''> All SEllars Total :  {buyers?.length}</h1>
-
-            {buyers?.map(buyer=><>
-            
-                <div className="">
-  {/* <table className="table w-full">
-   
-    <thead>
-      <tr>
-        <th>
-            <button>Deletet</button>
-        
-        </th>
-        <th>Name</th>
-        <th>Email</th>
-        <th>Role</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-     
-      <tr>
-        <th>
-      
-         
-         </th>
-        <td>
-          <div className="flex items-center space-x-3">
-          
-           
-            
-          </div>
-        </td>
-        <td>
-        
-          <br/>
-          <span className="badge badge-ghost badge-sm">Sellar Email</span>
-        </td>
-       
-        <th>
-        <div>
-              <div className="font-bold mx-2"></div>
-              
-            </div>
-        </th>
-      
-      </tr>
-     
-      
-    </tbody>
-   
-   
-    
-  </table> */}
-  <Table >
-  <Thead>
-    <Tr>
-      <Th></Th>
-      <Th></Th>
-      <Th>{buyer[2]}</Th>
-      <Th>{buyer [4]}</Th>
-    </Tr>
-    
-  </Thead>
-  <Tbody>
-    <Tr>
-      <Td> {buyer?.name}</Td>
-      <Td> {buyer?.email}</Td>
-      <Td>{buyer?.role}</Td>
-      <Td>  <button onClick={()=>handleDelete(buyer?._id)} className='btn btn-warning'>Delete</button></Td>
-    </Tr>
-  </Tbody>
-</Table>
-</div>
-            
-            </>)}
-
-        </div> 
-            
+      })
+  }
+  useEffect(
+    () => {
+      fetch('https://final-resale-project-assignment.vercel.app/userInfoUserData')
+        .then((res) => res.json())
+        .then(buyer => {
+          const filters = buyer.filter(buyer => buyer?.role === "buyer")
+          setLoader(false)
+          setBuyers(filters)
+          console.log(buyer);
+        })
+    }
+    , [])
+  return (
+    <div  className='bg-black px-3 pb-6 text-white'>
+      <div >
+        <h1 className='text-center text-4xl py-5'> All Buyers :  {buyers?.length}</h1>
+        <div className="overflow-x-auto">
+          <table className="table   w-full">
+            {/* head */}
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {buyers?.map(buyer =>
+                <tr>
+                  <th> {buyer?.name}</th>
+                  <td>{buyer
+                    ?.email}</td>
+                  <td><button onClick={() => handleDelete(buyer?._id)} className='btn text-4xl text-red-600 '><AiFillDelete /></button></td>
+                </tr>
+              )}
+            </tbody>
+          </table>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
-
 export default AllBuyers;
+{/*  */ }

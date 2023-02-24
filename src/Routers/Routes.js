@@ -19,6 +19,7 @@ import AdminRoute from "./AdminPrivateRoute";
 import SellarPrivateRoute from "./SellarPrivateRoute";
 import BuyerPrivateRoute from "./BuyerPrivateRoute";
 import Aboute from "../ProductComponent/About/Aboute";
+import ContacUs from "../ProductComponent/ContactUS/ContacUs";
 
 
 
@@ -53,6 +54,10 @@ export const router = createBrowserRouter([
         {
             path:"/about",
             element:<Aboute></Aboute>
+        },
+        {
+            path:"/contact",
+            element:<ContacUs></ContacUs>
         }
     ]
 },

@@ -48,7 +48,8 @@ const Aboute = () => {
             <div className='mx-10 my-5'>
                 <div>
                     <div className="card  shadow-xl">
-                        <figure><img className='w-full' style={{ height: "350px" }} src="https://i.pinimg.com/originals/5b/55/bd/5b55bd5d1f0459942e1921b8c73be2f7.jpg" alt="" /></figure>
+                        <figure><img className='w-full
+                        ' style={{ height: "350px" }} src="https://i.pinimg.com/originals/5b/55/bd/5b55bd5d1f0459942e1921b8c73be2f7.jpg" alt="" /></figure>
                         <div className="card-body">
                             <h2 className="card-title text-5xl">
                                 RS Motor Bikes Nationwide Showrooms
@@ -76,6 +77,18 @@ const Aboute = () => {
                           
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className='grid justify-center items-center mx-14 my-5'>
+
+                <div className='text-'>
+
+                    <h1 className='text-5xl my-3'>Buying from RS Motorbikes</h1>
+                    <p className='my-3'>Years of experience - we’ve got them. Expertise in motorcycle mechanics - we’ve got it. Wide range of brand new Yamahas, Kawasaki's, Triumphs, Ducatis ... and premium used motorbikes - you bet. But none of it means a thing if our customers aren’t happy. Above all, at Completely Motorbikes, the customer is king! Many of our customers are on their second, third or even TENTH RS Motor Bike - something we’re very proud of.</p>
+                </div>
+
+                <div className='my-4'>
+                    <img src='https://cdn.panopticmotion.co.uk/wp-content/uploads/2021/10/25124448/MOTOLINE-Showroom-10252021_124332-scaled.jpg'></img>
                 </div>
             </div>
 

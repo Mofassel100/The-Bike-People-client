@@ -3,7 +3,7 @@ import React from 'react';
 
 const Deshbord = () => {
     return (
-        <div>
+        <div className='bg-black'>
             <div className="carousel w-full">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="https://news.maxabout.com/wp-content/uploads/2018/02/TVS-Zeppelin-5.jpg" className="w-full" />

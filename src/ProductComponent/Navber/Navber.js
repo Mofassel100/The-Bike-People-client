@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import AdminRole from '../../Hooks/AdminRole';
 import SellarRole from '../../Hooks/SellarRoles';
+import ContactModal from '../ContactUS/ContactModal';
 
 
 const Navber = () => {
@@ -46,9 +47,14 @@ const googleLogin =()=>{
 const [isAdminRole]= AdminRole(user?.email)
 const [isSeller]= SellarRole(user?.email)
   const myInfo = <React.Fragment>
-<li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
 
-    {user?.uid ?
+<li className='px-2 mx-2 hover:text-lime-400'><Link to='/'>Home</Link></li>
+   
+      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400'><label htmlFor="my-modal-4" className="">Contact Us</label></li>
+      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
+
+      {user?.uid ?
       <>
         <li  className='px-2 mx-2 hover:text-lime-400'><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
         <li  className='px-2 mx-2 hover:text-lime-400'><Link >{user?.displayName}</Link></li>
@@ -59,7 +65,6 @@ const [isSeller]= SellarRole(user?.email)
         <li  className='px-2 mx-2 hover:text-lime-400'><Link to='register'>Register</Link></li>
        
       </>}
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
     {/* <div className="relative group">
               <div className="flex items-center cursor-pointer py-1">
                 <button className="bg-blue p-3 inline-flex justify-center items-center ">
@@ -88,8 +93,8 @@ const [isSeller]= SellarRole(user?.email)
             </div> */}
 
 
-            {isAdminRole &&  <li ><Link to='/deshbord'>Deshbord</Link></li>}
-            {isSeller &&  <li ><Link to='/deshbord'>Deshbord</Link></li>}
+            {isAdminRole &&  <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
+            {isSeller &&  <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
   </React.Fragment>
   const deshbord = <React.Fragment>
 
@@ -166,6 +171,7 @@ const [isSeller]= SellarRole(user?.email)
         </div>
      */}
       </div>
+      <ContactModal></ContactModal>
     </div>
   );
 };

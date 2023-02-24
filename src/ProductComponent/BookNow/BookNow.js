@@ -100,9 +100,6 @@ setCloseModale(false)
           
           
           <p className='text-primary'>Location:</p>
-        
-
-         
           <textarea className="textarea" name='location' placeholder="Bangladesh ,Dhaka ,New Market"></textarea>
         </div>
        
