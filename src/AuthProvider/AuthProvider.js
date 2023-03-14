@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile, updatePassword, sendPasswordResetEmail } from "firebase/auth"
 import app from '../Firebase.config/Firebase.config'
 import { current } from 'daisyui/src/colors';
 export const AuthContext = createContext()
@@ -39,6 +39,14 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
     // -----------
+
+    // reset password 
+
+   ;
+   const resetePassword= (email)=>{
+    return sendPasswordResetEmail(auth,email)
+   }
+    // -------------------------
     // useEffect
     useEffect(() => {
         const unsubCriber = onAuthStateChanged(auth, current => {
@@ -56,6 +64,7 @@ const AuthProvider = ({ children }) => {
         LogOutUser,
         UpdateUsersProfils,
         googleLogIn,
+        resetePassword,
 
     }
     return (

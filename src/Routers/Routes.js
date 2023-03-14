@@ -20,6 +20,7 @@ import SellarPrivateRoute from "./SellarPrivateRoute";
 import BuyerPrivateRoute from "./BuyerPrivateRoute";
 import Aboute from "../ProductComponent/About/Aboute";
 import ContacUs from "../ProductComponent/ContactUS/ContacUs";
+import ResetPassword from "../ProductComponent/Authentication/ResetPassword";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
             {
                 path: "/contact",
                 element: <ContacUs></ContacUs>
+            },
+            {
+                path: "/resetpass",
+                element:<ResetPassword></ResetPassword>
             }
         ]
     },

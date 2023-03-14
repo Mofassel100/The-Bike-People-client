@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HomeBanar from '../HomeBanar/HomeBanar';
+import BikesAward from './BikesAward/BikesAward';
 import MotorBikesBrand from './MotorBikesBrand/MotorBikesBrand';
 import CardIcon from './rendomCard/CardIcons';
 
@@ -71,7 +72,9 @@ const Home = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 rounded gap-8'>
             {data?.map(catagory =>
               <div key={catagory._id} className=''>
-                <div className="hero w-96 h-96" style={{ backgroundImage: `url(${catagory?.picture})` }}>
+                <div className="hero w-96 h-96" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500" style={{ backgroundImage: `url(${catagory?.picture})` }}>
                   <div className="hero-overlay bg-opacity-10"></div>
                   <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
@@ -88,6 +91,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <BikesAward></BikesAward>
       <div className='my-4 text-white mx-4 lg:text-center '>
         <h1 className="text-center text-lime-600 text-3xl">RS MotorCycle</h1>
         <p >motorcycle, any two-wheeled or, less commonly, three-wheeled motor vehicle, usually propelled by an internal-combustion engine.</p>

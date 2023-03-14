@@ -79,7 +79,7 @@ const Register = () => {
                 </div>
                 <div className="form-control w-full max-w-xs">
                     <label className="label">
-                        <span className="label-text font-bold text-white">Photo URL</span>
+                        <span className="label-text font-bold text-black">Photo URL</span>
                     </label>
                     <input type="text" className="input font-bold input-bordered w-full max-w-xs" {...register("photoURL")} placeholder="Enter Your photo URL" />
                 </div>
@@ -87,7 +87,7 @@ const Register = () => {
                     <label className="label">
                         <span className="label-text text-white font-bold">Email</span>
                     </label>
-                    <input type="email" className="input fond-bold input-bordered w-full max-w-xs" {...register("email", { required: "Email Address in required" })} placeholder="Enter Your Email" />
+                    <input type="email" className="input text-black fond-bold text-2xl font-bold input-bordered w-full max-w-xs" {...register("email", { required: "Email Address in required" })} placeholder="Enter Your Email" />
                     <br />
                     {/* 
                     {error.email && <p className='text-red-700' role="alert"> {errors.email?.message}</p>} */}
@@ -97,7 +97,7 @@ const Register = () => {
                         <span className="label-text text-white font-bold">Password</span>
 
                     </label>
-                    <input type="Password" className="input input-bordered w-full max-w-xs" {...register("password", {
+                    <input type="Password"  className="input input-bordered w-full text-2xl font-bold max-w-xs text-black tont-bold" {...register("password", {
                         required: "Password address is Required",
                         minLength: { value: 6, message: "password min mum 6 caracters" }
                     })} placeholder="Enter Your Password" />

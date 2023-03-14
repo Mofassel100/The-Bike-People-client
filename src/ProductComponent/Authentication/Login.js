@@ -4,8 +4,9 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
+
 const Login = () => {
-    const { loginUsers, googleLogIn } = useContext(AuthContext)
+    const { loginUsers, googleLogIn,resetePassword } = useContext(AuthContext)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate()
     const location = useLocation()
@@ -21,6 +22,11 @@ const Login = () => {
                 toast.error(error.message)
             })
     }
+
+    // const hadleResetPassword = ()=>
+    // {
+    //     updatePassword(user,new)
+    // }
     return (
         <div className=' grid justify-center items-center bg-black text-white font-bold mx-2'>
             <form onSubmit={handleSubmit(hadleLogingSubmit)} >
@@ -52,10 +58,15 @@ const Login = () => {
                     <button className='btn btn '>Login</button>
                 </div>
             </form>
+            <div className='text-center btn text-red-500 text-xl my-2'>
+                <Link to="/resetpass">Reset Paassword</Link>
+            </div>
             <div className='mb-7'>
                 <div className='text-center my-5 mx-3'>
                     <button onClick={googleLogIn}> <FcGoogle className='text-5xl' />  </button>
                 </div>
+
+
                 <p>Are You New User ? <Link className='text-teal-400' to='/register'>Create new Account</Link></p>
             </div>
         </div>
