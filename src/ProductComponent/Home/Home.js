@@ -1,12 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 import HomeBanar from '../HomeBanar/HomeBanar';
 import BikesAward from './BikesAward/BikesAward';
 import MotorBikesBrand from './MotorBikesBrand/MotorBikesBrand';
 import CardIcon from './rendomCard/CardIcons';
 
 const Home = () => {
+  const {user}= useContext(AuthContext)
   const { data, isLoading } = useQuery({
     queryKey: ['catagory'],
     queryFn: async () => {
@@ -28,6 +30,8 @@ const Home = () => {
         </div>
       </div></>
   }
+  console.log(user);
+
   return (
     <div className='bg-black'>
       <HomeBanar></HomeBanar>

@@ -41,19 +41,19 @@ const Navber = () => {
   const [isAdminRole] = AdminRole(user?.email)
   const [isSeller] = SellarRole(user?.email)
   const myInfo = <React.Fragment>
-    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/'>Home</Link></li>
-    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/about'>About Us</Link></li>
-    <li className='px-2 mx-2 hover:text-lime-400'><label htmlFor="my-modal-4" className="">Contact Us</label></li>
-    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/blogs'>Blog</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Home"><Link to='/'>Home</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="About Us Info"><Link to='/about'>About Us</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip  lg:tooltip-left  sm:tooltip-top' data-tip="Contact Information"><label htmlFor="my-modal-4" className="">Contact Us</label></li>
+    <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Blog Details"><Link to='/blogs'>Blog</Link></li>
     {user?.uid ?
       <>
-        <li className='px-2 mx-2 hover:text-lime-400'><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
-        <li className='px-2 mx-2 hover:text-lime-400'><Link >{user?.displayName}</Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Log Out"><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Profile"><Link ><img className='w-10 h-10 rounded-full' src={user?.photoURL} /></Link></li>
       </>
       :
       <>
-        <li className='px-2 mx-2 hover:text-lime-400'> <Link to='login'>Login</Link></li>
-        <li className='px-2 mx-2 hover:text-lime-400'><Link to='register'>Register</Link></li>
+        <li className='px-2   mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Login"> <Link to='login'>Login</Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Register"><Link to='register'>Register</Link></li>
 
       </>}
     {/* <div className="relative group">
@@ -65,9 +65,9 @@ const Navber = () => {
                   </svg>
                 </button>
               </div>
-              <div className="items-center absolute  invisible group-hover:visible">
+              <div className="items-center  absolute  invisible group-hover:visible">
                 <ul className="list-reset text-black">
-                  <li><Link to="/TaskManagement/TaskManagement" className="px-2 py-2   block">Task Management</Link></li>
+                  <li><Link to="/TaskManagement/TaskManagement" className="px-2  py-2   block">Task Management</Link></li>
                   <li><Link to="/teamManagement/createMember" className="px-2 py-2   block">Create Team</Link></li>
                   <li><Link to="/teamManagement/teamMembers" className="px-2 py-2   block">TeamMember</Link></li>
                   <li> <Link className="px-2 py-2   block" to='/Features/features'>Portfolios</Link></li>
@@ -75,15 +75,11 @@ const Navber = () => {
 
                   <li> <Link className="px-2 py-2   block" to='/integration/integrations'>Integration</Link></li>
                   <li> <Link className="px-2 py-2   block" to="/myGoals">Goals</Link></li>
-
-
                 </ul>
-
               </div>
-
             </div> */}
-    {isAdminRole && <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
-    {isSeller && <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>}
+    {isAdminRole && <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top'><Link to='/deshbord'>Deshbord</Link></li>}
+    {isSeller && <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-right  sm:tooltip-top' data-tip=" Admin Dashbord "><Link to='/deshbord'>Deshbord</Link></li>}
   </React.Fragment>
   const deshbord = <React.Fragment>
   </React.Fragment>
