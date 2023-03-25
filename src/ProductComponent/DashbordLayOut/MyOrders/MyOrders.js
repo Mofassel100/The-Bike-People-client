@@ -5,7 +5,7 @@ const MyOrders = () => {
     const [data,setData]=useState([])
     useEffect(
       ()=>{
-        fetch('https://final-resale-project-assignment.vercel.app/book')
+        fetch('https://final-project-server-assignmen.vercel.app/book')
         .then(res=>res.json())
         .then(data=>{
           setData(data)

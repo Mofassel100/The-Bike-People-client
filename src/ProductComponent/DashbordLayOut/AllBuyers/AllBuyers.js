@@ -5,7 +5,7 @@ const AllBuyers = () => {
   const [buyers, setBuyers] = useState([])
   const [loader, setLoader] = useState(true)
   const handleDelete = id => {
-    fetch(`https://final-resale-project-assignment.vercel.app/userBuyer/Delete/${id}`, {
+    fetch(`https://final-project-server-assignmen.vercel.app/userBuyer/Delete/${id}`, {
       method: "DELETE"
     })
       .then(res => res.json())
@@ -23,7 +23,7 @@ const AllBuyers = () => {
   }
   useEffect(
     () => {
-      fetch('https://final-resale-project-assignment.vercel.app/userInfoUserData')
+      fetch('https://final-project-server-assignmen.vercel.app/userInfoUserData')
         .then((res) => res.json())
         .then(buyer => {
           const filters = buyer.filter(buyer => buyer?.role === "buyer")
@@ -37,7 +37,7 @@ const AllBuyers = () => {
     <div  className='bg-black px-3 pb-6 text-white'>
       <div >
         <h1 className='text-center text-4xl py-5'> All Buyers :  {buyers?.length}</h1>
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto text-black">
           <table className="table   w-full">
             {/* head */}
             <thead>
@@ -53,7 +53,7 @@ const AllBuyers = () => {
                   <th> {buyer?.name}</th>
                   <td>{buyer
                     ?.email}</td>
-                  <td><button onClick={() => handleDelete(buyer?._id)} className='btn text-4xl text-red-600 '><AiFillDelete /></button></td>
+                  <td><button onClick={() => handleDelete(buyer?._id)} className='btn text-4xl text-red-600 tooltip' data-tip="Delete Buyer"><AiFillDelete /></button></td>
                 </tr>
               )}
             </tbody>

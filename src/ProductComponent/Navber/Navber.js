@@ -17,7 +17,7 @@ const Navber = () => {
             email: user.email,
             role: 'buyer'
           }
-          fetch('https://final-resale-project-assignment.vercel.app/usersInfo', {
+          fetch('https://final-project-server-assignmen.vercel.app/usersInfo', {
             method: "POST",
             headers: {
               "content-type": "application/json"
@@ -48,7 +48,9 @@ const Navber = () => {
     {user?.uid ?
       <>
         <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Log Out"><Link ><button onClick={LogOutUser}>Log Out</button></Link></li>
-        <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Profile"><Link ><img className='w-10 h-10 rounded-full' src={user?.photoURL} /></Link></li>
+        <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="User Profile"><Link >{
+          user?.photoURL ? <> <img className='w-10 h-10 rounded-full' src={user?.photoURL} /></>:<> <img className='w-10 h-10 rounded-full' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzH6TfTtq91hzmeIvm_4JOdb5y1UWjTlYZdA&usqp=CAU" /></>
+        }</Link></li>
       </>
       :
       <>
@@ -78,7 +80,7 @@ const Navber = () => {
                 </ul>
               </div>
             </div> */}
-    {isAdminRole && <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top'><Link to='/deshbord'>Deshbord</Link></li>}
+    {isAdminRole && <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip='Deshboard'><Link to='/deshbord'>Deshbord</Link></li>}
     {isSeller && <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-right  sm:tooltip-top' data-tip=" Admin Dashbord "><Link to='/deshbord'>Deshbord</Link></li>}
   </React.Fragment>
   const deshbord = <React.Fragment>

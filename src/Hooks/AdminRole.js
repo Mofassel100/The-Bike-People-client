@@ -11,7 +11,7 @@ useEffect(
     ()=>{
 
         if(email){
-            fetch(`https://final-resale-project-assignment.vercel.app/adminRole/${email}`)
+            fetch(`https://final-project-server-assignmen.vercel.app/adminRole/${email}`)
             .then(res=>res.json())
             .then(admin=>{
                 setAdminRole(admin?.isAdminRole)

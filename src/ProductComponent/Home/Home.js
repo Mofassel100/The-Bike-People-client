@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 import HomeBanar from '../HomeBanar/HomeBanar';
 import BikesAward from './BikesAward/BikesAward';
+import EshopSefty from './EShopSefty/EshopSefty';
 import MotorBikesBrand from './MotorBikesBrand/MotorBikesBrand';
 import CardIcon from './rendomCard/CardIcons';
 
@@ -12,7 +13,7 @@ const Home = () => {
   const { data, isLoading } = useQuery({
     queryKey: ['catagory'],
     queryFn: async () => {
-      const res = await fetch('https://final-resale-project-assignment.vercel.app/catagory')
+      const res = await fetch('https://final-project-server-assignmen.vercel.app/catagory')
       const data = await res.json()
 
       return data;
@@ -36,6 +37,8 @@ const Home = () => {
     <div className='bg-black'>
       <HomeBanar></HomeBanar>
       <CardIcon></CardIcon>
+      {/* Eshp sefty */}
+      <EshopSefty/>
       <MotorBikesBrand></MotorBikesBrand>
       <div>
         <h1 className="text-center text-6xl my-4  text-teal-500">RS Motor Bikes</h1>

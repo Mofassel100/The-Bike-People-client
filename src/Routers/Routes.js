@@ -21,6 +21,9 @@ import BuyerPrivateRoute from "./BuyerPrivateRoute";
 import Aboute from "../ProductComponent/About/Aboute";
 import ContacUs from "../ProductComponent/ContactUS/ContacUs";
 import ResetPassword from "../ProductComponent/Authentication/ResetPassword";
+import AddGuantiHandP from "../ProductComponent/DashbordLayOut/AddGuantiHandProduct/AddGuantiHandP";
+import HandProduct from "../ProductComponent/Home/HandP/HandProduct";
+import HadnProDetails from "../ProductComponent/Home/HandP/HadnProDetails";
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -42,7 +45,7 @@ export const router = createBrowserRouter([
             {
                 path: '/products/:company',
                 element: <PrivateRouter><Product></Product></PrivateRouter>,
-                loader: ({ params }) => fetch(`https://final-resale-project-assignment.vercel.app/products/${params.company}`)
+                loader: ({ params }) => fetch(`https://final-project-server-assignmen.vercel.app/products/${params.company}`)
             },
             {
                 path: "/blogs",
@@ -59,7 +62,17 @@ export const router = createBrowserRouter([
             {
                 path: "/resetpass",
                 element:<ResetPassword></ResetPassword>
-            }
+            },
+            {
+                path: "/hand",
+                element:<HandProduct></HandProduct>,
+                loader:()=>fetch("https://final-project-server-assignmen.vercel.app/hand")
+            },
+            {
+                path: '/hand/:id',
+                element: <HadnProDetails></HadnProDetails>,
+                loader: ({ params }) => fetch(`https://final-project-server-assignmen.vercel.app/hand/${params.id}`)
+            },
         ]
     },
     {
@@ -74,6 +87,10 @@ export const router = createBrowserRouter([
             {
                 path: "/deshbord/addproduct",
                 element: <SellarPrivateRoute><AddAProduct></AddAProduct></SellarPrivateRoute>
+            },
+            {
+                path: "/deshbord/addGuantiHand",
+                element: <AddGuantiHandP></AddGuantiHandP>
             },
             {
                 path: "/deshbord/myproduct",

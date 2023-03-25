@@ -15,18 +15,22 @@ const Header = () => {
   const [isBuyer] = BuyerRole(user?.email)
   const deshbord = <React.Fragment>
     
-    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/'>Home</Link></li>
-    <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord'>Deshbord</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400  tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Home"><Link to='/'>Home</Link></li>
+    <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top'data-tip="DEshbord"><Link to='/deshbord'>Deshbord</Link></li>
     {isSeller && <>
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord/addproduct'>Add Product</Link></li>
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='/deshbord/myproduct'>My Product </Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Add Product"><Link to='/deshbord/addproduct' >Add Product</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="My Product"><Link to='/deshbord/myproduct'>My Product </Link></li>
     </>}
     {isAdminRole && <>
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='deshbord/allsellers'>All Sellar</Link></li>
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='deshbord/allbuyers'>All Buyers</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="All Sellar"><Link to='deshbord/allsellers'>All Sellar</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400  tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="All Buyer"><Link to='deshbord/allbuyers' >All Buyers</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Add Product"><Link to='/deshbord/addproduct' >Add Product</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="Add Product"><Link to='/deshbord/addGuantiHand' >Add Hand Product</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="My Product"><Link to='/deshbord/myproduct'>My Product </Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="My Orders"><Link to='deshbord/myorders' >My Orders</Link></li>
     </>}
     {isBuyer &&
-      <li className='px-2 mx-2 hover:text-lime-400'><Link to='deshbord/myorders'>My Orders</Link></li>
+      <li className='px-2 mx-2 hover:text-lime-400 tooltip-primary tooltip lg:tooltip-left  sm:tooltip-top' data-tip="My Orders"><Link to='deshbord/myorders' >My Orders</Link></li>
     }
   </React.Fragment>
   return (

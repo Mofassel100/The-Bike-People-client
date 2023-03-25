@@ -8,15 +8,25 @@ const MyOrders = () => {
   const [data, setData] = useState([])
   useEffect(
     () => {
-      fetch(`https://final-resale-project-assignment.vercel.app/deshbord/myorders/${user?.email}`)
+      fetch(`https://final-project-server-assignmen.vercel.app/deshbord/myorders/${user?.email}`)
         .then(res => res.json())
         .then(data => {
           setData(data)
           toast.success("Product Success Full")
         })
     }, [user?.email])
+  useEffect(
+    () => {
+      fetch(`https://final-project-server-assignmen.vercel.app/deshbord/myorhand/${user?.email}`)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          setData(data)
+          toast.success("Product Success Full")
+        })
+    }, [user?.email])
   const handleDeleteProduct = id => {
-    fetch(`https://final-resale-project-assignment.vercel.app/SellarProduct/Delete/${id}`, {
+    fetch(`https://final-project-server-assignmen.vercel.app/SellarProduct/Delete/${id}`, {
       method: "DELETE"
     })
       .then(res => res.json())
@@ -41,17 +51,17 @@ const MyOrders = () => {
           <div className="hero-content flex-col lg:flex-row-reverse">
             <img src={addProduct?.picture} className="max-w-sm rounded-lg shadow-2xl" />
             <div>
-              <h1 className="text-5xl font-bold">{addProduct.company}</h1>
+              <h1 className="text-5xl font-bold">{addProduct?.company}</h1>
               <div className='grid grid-cols-1 lg:grid-cols-2'>
-                <p className="py-6">Sellar Name : {addProduct.role}</p>
-                <p className="py-6">Email : {addProduct.email}</p>
-                <p className="py-6">Comments : {addProduct.commetsType}</p>
-                <p className="py-6">Use Time : {addProduct.age}</p>
-                <p className="py-6 mr-2">purchars Times : {addProduct.Year}</p>
-                <p className="py-6">Location : {addProduct.location}</p>
-                <p className="py-6">Phone : {addProduct.phone}</p>
-                <p className="py-6">Title  : {addProduct.name}</p>
-                <p> {addProduct.description}</p>
+                <p className="py-6">Sellar Name : {addProduct?.role}</p>
+                <p className="py-6">Email : {addProduct?.email}</p>
+                <p className="py-6">Comments : {addProduct?.commetsType}</p>
+                <p className="py-6">Use Time : {addProduct?.age}</p>
+                <p className="py-6 mr-2">purchars Times : {addProduct?.Year}</p>
+                <p className="py-6">Location : {addProduct?.location}</p>
+                <p className="py-6">Phone : {addProduct?.phone}</p>
+                <p className="py-6">Title  : {addProduct?.name}</p>
+                <p> {addProduct?.description}</p>
               </div>
               <div className='text-center my-6'>
                 <button onClick={() => handleDeleteProduct(addProduct?._id)} className="btn btn-primary">Delete Product</button>

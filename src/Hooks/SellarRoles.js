@@ -9,7 +9,7 @@ useEffect(
     ()=>{
 
         if(email){
-            fetch(`https://final-resale-project-assignment.vercel.app/sellar/${email}`)
+            fetch(`https://final-project-server-assignmen.vercel.app/sellar/${email}`)
             .then(res=>res.json())
             .then(Sellar=>{
                 setSellarLoaders(false)

@@ -6,8 +6,9 @@ import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { BsFacebook } from "react-icons/bs";
 const Register = () => {
-    const { NewRegisterUser, UpdateUsersProfils, loader, googleLogIn,user } = useContext(AuthContext)
+    const { NewRegisterUser, UpdateUsersProfils, loader, googleLogIn,user ,FacebookSignIn} = useContext(AuthContext)
     let navigate = useNavigate();
     let location = useLocation();
     const imageKey = process.env.REACT_APP_imgbb_key
@@ -15,7 +16,6 @@ const Register = () => {
     let from = location.state?.from?.pathname || "/";
     const { register, handleSubmit, formState: { errors } } = useForm();
    
-
     //     <select name="slot" className="select select-bordered w-full">
     //     {
     //         slots.map((slot, i) => <option
@@ -24,13 +24,26 @@ const Register = () => {
     //         >{slot}</option>)
     //     }
     // </select>
-
+   const FaceboosinInWithLogin = ()=>{
+    FacebookSignIn()
+    .then(result=>{
+        navigate(from, { replace: true }); 
+    })
+}
+   const GooglesinInWithLogin = ()=>{
+    googleLogIn()
+    .then(result=>{
+        toast.success("Facebook Login succefull")
+        navigate(from, { replace: true });
+        console.log(result);
+        
+    })
+   }
     const hadleLogingSubmit = (data) => {
-       
         const image = data.image[0]
 
         const formData = new FormData()
-        formData.append('image',image)
+             formData.append('image',image)
         const url = `https://api.imgbb.com/1/upload?key=${imageKey}`
        
         fetch(url, {
@@ -39,18 +52,15 @@ const Register = () => {
           })
             .then(res => res.json())
             .then(imageLoad => {
-        
-          
-            const userProfile = {
+       const userProfile = {
 
                 name: data.name,
                 email: data.email,
                 image:imageLoad.data.display_url,
                 role: data.role,
-    
             }
             
-         fetch('https://final-resale-project-assignment.vercel.app/usersInfo', {
+         fetch('https://final-project-server-assignmen.vercel.app/usersInfo', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -61,9 +71,7 @@ const Register = () => {
             .then(database => {
                 console.log("Mongodb",database);
             })
-const imagesUpdat = imageLoad.data.display_url
-
-
+     const imagesUpdat = imageLoad.data.display_url
             NewRegisterUser(data.email, data.password)
             .then((result) => {
             toast.success("Register Succesfull")
@@ -88,12 +96,10 @@ const imagesUpdat = imageLoad.data.display_url
                 toast.error(error.message)
             })
             console.log(userProfile);
-        
-        
         })
 
 
-        // fetch('https://final-resale-project-assignment.vercel.app/usersInfo', {
+        // fetch('https://final-project-server-assignmen.vercel.app/usersInfo', {
         //     method: "POST",
         //     headers: {
         //         "content-type": "application/json"
@@ -149,20 +155,31 @@ const imagesUpdat = imageLoad.data.display_url
                     <br />
                     {errors.password && <p role="alert" className='text-red-600'>{errors.password?.message}</p>}
                 </div>
-                <div className='flex'>
-                    <select required className='px-5 font-bold text-black py-3 tooltip tooltip-primary tooltip-top' data-tip="Choose Buyer OR Sellar" {...register("role")}>
+                <div className='text-center py-4'>
+                    <select required className='px-5 font-bold w-full font-bold text-black py-3 tooltip tooltip-primary tooltip-top' data-tip="Choose Buyer OR Sellar" {...register("role")}>
                         <option className='p-3 ' value="buyer">Buyers</option>
-                        <option className='p-3' value="sellar">sellars</option>
+                        <option className='p-3' value="sellar">Sellars</option>
                     </select>
-                    <div className='grid justify-center tooltip tooltip-primary tooltip-top items-center ml-11' data-tip="Google Login">
-                        <button onClick={googleLogIn}> <FcGoogle className='text-5xl' />  </button>
-                        {/* <Link >  </Link> */}
-                    </div>
+                   
                 </div>
                 <div className='text-center my-4'>
-                    <button className='btn btn '>Register</button>
+                    <button className='btn btn w-full '>Register</button>
                 </div>
             </form>
+        <div className='flex text-center py-8 pl-10'>
+             {/* google login */}
+             <div className='grid justify-center tooltip tooltip-primary tooltip-top items-center ml-11' data-tip="Google Login">
+                        <button onClick={GooglesinInWithLogin}> <FcGoogle className='text-5xl' />  </button>
+                        {/* <Link >  </Link> */}
+                    </div>
+                    {/* ----------------- */}
+                    {/* google login */}
+                    <div className='grid justify-center tooltip tooltip-primary tooltip-top items-center ml-11' data-tip="FaceBook Login">
+                        <button onClick={FaceboosinInWithLogin}> <BsFacebook className='text-5xl bg-blue-600 rounded ' />  </button>
+                        {/* <Link >  </Link> */}
+                    </div>
+                    {/* ----------------- */}
+        </div>
         </div>
     );
 };

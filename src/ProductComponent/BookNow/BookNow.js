@@ -49,7 +49,7 @@ setCloseModale(false)
         location,
         
       }
-      fetch('https://final-resale-project-assignment.vercel.app/bookmodal',{
+      fetch('https://final-project-server-assignmen.vercel.app/bookmodal',{
         method:"POST",
         headers:{"content-type":"application/json"},
         body:JSON.stringify(modalData)
