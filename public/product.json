@@ -1,145 +1,133 @@
 [
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRULVJm4aClPJi5sadLL7n3nR5-qwCrDOW8A&usqp=CAU",
-      "positionName": "Frontend Developer",
-      "companyName": "NET Developer (Fresher)",
-      "location": " Dhaka,  Bangladesh",
-      "logo": "",
-      "brand":"Fresher Job",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "We are looking for a fresh developer having some exposure to object oriented programming with focus on .NET environment and tools. As a fresher, you will be working in a software development team of 10-12 members learning the techniques and principles of database design, front-end and back-end code development."
-     
-    },
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LgJSArPd7e3VYCFkwY2g6XM4qhJN7LKjG1svB71GmV56nWsrLfcD8AQUf2ubDM7rUXE&usqp=CAU",
-      "positionName": "Junior Engineer",
-      "companyName": "Technical Sales & Support Engineere",
-      "location": " Dhaka,  Bangladesh",
-      "logo": "",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Person should have good knowledge about Diesel Generator, Natural Gas Generator, High Voltage Sub-Station, Lift ,Energy Meter, Measuring Instrument, VFD,PLC, Instrument & Control System Products and related spare parts"
-     
-    },
-    {
-      "picture": "https://cdn1.vectorstock.com/i/1000x1000/03/15/business-meeting-isometric-3d-icon-vector-17990315.jpg",
-      "positionName": "Junior office for Markinting",
-      "companyName": "Marketing Executive (Interior & Furniture Marketing)",
-      "location": " Dhaka,  Bangladesh",
-      "logo": "",
-      "brand":"Fresher Job",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Gravity Interior Design is a well known Organization in Interior & Furniture Industry sector in Bangladesh. We produce quality Home interior & Furniture, Corporate Furniture, Metal Furniture and Interior Design in our own Factory."
-     
-    },
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGCCg1h4yFOVFd_ZcbOPAFaGqrO923BX0zTKfrTT0rcTKdrtLE9lSUjobw4U5Yh92W_s&usqp=CAU",
-      "positionName": "FullStack Developer",
-      "companyName": "Agumentik Group of Companies",
-      "location": " Bengaluru",
-      "logo": "",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "We are the fastest growing startup in Andhra Pradesh for designing Software, Website Development, App Development, Animation, Game Designing and Digital Marketing Era"
-     
-    },
-    {
-      "picture": "https://img.freepik.com/free-vector/business-meeting-office-illustration-concept_52683-26610.jpg?w=2000",
-      "positionName": "Junior Engineer",
-      "companyName": "Crestaerospace Technologies Private Limited",
-      "location": "Bangalore",
-      "logo": "",
-      "brand":"Fresher Job",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "We are a team of Aerospace Domain specialists and our focus areas are Happy Customers and Happy Employees. We put great emphasis on Quality of Work and Deliverable so that every one is satisfied.e"
-     
-    },
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3aR1lCMDNYFZA2JDpLNTKqbND7fXacU-GHgGkgq8G3EH0HAhKSjpGPfZ85GJt4bQBY5E&usqp=CAU",
-      "positionName": "Junior Officer for Designer",
-      "companyName": "Senior Visualizer/Graphic Designer",
-      "location": "Dhanmondi, Dhaka",
-      "logo": "",
-      "brand":"Fresher Job",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "xcellent knowledge in visualization.Excellent and Advanced knowledge on Adobe Photoshop, Illustrator, 3d Max, other Graphic related software"
-     
-    },
-    {
-      "picture": "https://c8.alamy.com/comp/2H0KXBH/writing-displaying-text-best-workplace-conceptual-photo-ideal-company-to-work-with-high-compensation-stress-free-online-jobs-and-working-remotely-con-2H0KXBH.jpg",
-      "positionName": "Angular Developer ( Full Stack)",
-      "companyName": "Midas Software Solutions LTD  ",
-      "location": "Cyberjaya, Malaysi",
-      "logo": "https://media.licdn.com/dms/image/C4D0BAQHS9rquUQIzcg/company-logo_100_100/0/1657251828147?e=1684972800&v=beta&t=KFrVgaEhrdIdnSt7xvPJClzf2ApGt-y4WQ4vkg45XR4",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "As a Tech Lead at Deriv, you will be responsible for driving the technical direction of your team, assisting senior leaders on strategic roadmaps and driving priorities."
-     
-    },
-  
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZgqgclVpzEwxgPMxOXltAIHFg4C-jKEOsq-V0F_QwQAsWjkAqwgIFIMqs6uuFO_rgkbU&usqp=CAU",
-      "positionName": "React Native Developer",
-      "companyName": "BrightDev",
-      "location": "Bangladesh Remote",
-      "logo": "https://media.licdn.com/dms/image/C4E0BAQFsFO7g2IHLPw/company-logo_200_200/0/1672920710888?e=1684972800&v=beta&t=ITyTMxaBKE6Mu98_4CRWS11KzzukIEUCkshS9V5pAa4",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
-     
-    },
-    {
-      "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PVz80BA3L-e3yfFLMpJsa2DioaAX9tCerLYrydgOEZVCGabDEiWaDXMSwqLQiwBeH_s&usqp=CAU",
-      "positionName": "Web Search Evaluator",
-      "companyName": "Appen",
-      "location": "Nator, Rajshahi, Bangladesh Remote ",
-      "logo": "https://media.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1684972800&v=beta&t=asSi5K7_7c_YWjLeKj90AXl-X7QWXaHbHpnv-3TJYCg",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
-     
-    },
-    {
-      "picture": "https://devonjobs-uploads.s3.eu-west-2.amazonaws.com/633498717277/Finding-a-job.jpeg",
-      "positionName": "Senior Software Engineer",
-      "companyName": "SetSchedule",
-      "location": "Dhaka, Bangladesh Remote",
-      "logo": "https://media.licdn.com/dms/image/C560BAQF5_cfA_rl2-Q/company-logo_100_100/0/1615234152233?e=1684972800&v=beta&t=Z_XxVXQ04ZoH5HA7QhKv5oiePH-I4bwzSQ4OktVVNzk",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Are you a passionate developer who wants to build products that have a positive impact in the tech industry, or potentially the world? Are you an engineer who wants to take their career to the next level by mentoring and coaching a team of developers ?  "
-     
-    },
-    {
-      "picture": "https://assets-global.website-files.com/602a97fb7ff89c083c49cc06/611d217a2985b2402359e4c5_Screenshot%202021-08-18%20at%2016.04.01.png",
-      "positionName": "Empleo Junior Backend Developer",
-      "companyName": "Trabajo",
-      "location": "Bangladesh Remote",
-      "logo": "https://media.licdn.com/dms/image/D4D0BAQGFJMkBlTYwMA/company-logo_100_100/0/1667236443972?e=1684972800&v=beta&t=ZBoP4eKDwYKTdZ34XGX962La7TlR9hFeThf27MWHKXs",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Traditional recruiting wasn’t designed for today’s software-first world. The old model is simply too slow, doesn’t allow for deep vetting and takes the control and ownership out of your hands."
-     
-    },
-    {
-      "picture": "https://www.firstachieve.com/media/1082/summer-job-seekers-first-achieve.jpg",
-      "positionName": "Senior NodeJS Software Engineer",
-      "companyName": "BrightDev",
-      "location": "Dhaka, Bangladesh",
-      "logo": "https://media.licdn.com/dms/image/C560BAQExVwDLJIjW3A/company-logo_100_100/0/1519879432158?e=1684972800&v=beta&t=p71nk88_11Yx7whcufNmEbhMYcTY-GAl1C_yV3i8_J4",
-      "brand":"Experienced",
-      "time":"Full-time",
-      "phone": "+1 (992) 539-3560",
-      "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
-     
-    }
-  ]
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRULVJm4aClPJi5sadLL7n3nR5-qwCrDOW8A&usqp=CAU",
+    "positionName": "Frontend Developer",
+    "companyName": "NET Developer (Fresher)",
+    "location": " Dhaka,  Bangladesh",
+    "logo": "",
+    "brand": "Fresher Job",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "We are looking for a fresh developer having some exposure to object oriented programming with focus on .NET environment and tools. As a fresher, you will be working in a software development team of 10-12 members learning the techniques and principles of database design, front-end and back-end code development."
+  },
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LgJSArPd7e3VYCFkwY2g6XM4qhJN7LKjG1svB71GmV56nWsrLfcD8AQUf2ubDM7rUXE&usqp=CAU",
+    "positionName": "Junior Engineer",
+    "companyName": "Technical Sales & Support Engineere",
+    "location": " Dhaka,  Bangladesh",
+    "logo": "",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Person should have good knowledge about Diesel Generator, Natural Gas Generator, High Voltage Sub-Station, Lift ,Energy Meter, Measuring Instrument, VFD,PLC, Instrument & Control System Products and related spare parts"
+  },
+  {
+    "picture": "https://cdn1.vectorstock.com/i/1000x1000/03/15/business-meeting-isometric-3d-icon-vector-17990315.jpg",
+    "positionName": "Junior office for Markinting",
+    "companyName": "Marketing Executive (Interior & Furniture Marketing)",
+    "location": " Dhaka,  Bangladesh",
+    "logo": "",
+    "brand": "Fresher Job",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Gravity Interior Design is a well known Organization in Interior & Furniture Industry sector in Bangladesh. We produce quality Home interior & Furniture, Corporate Furniture, Metal Furniture and Interior Design in our own Factory."
+  },
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrGCCg1h4yFOVFd_ZcbOPAFaGqrO923BX0zTKfrTT0rcTKdrtLE9lSUjobw4U5Yh92W_s&usqp=CAU",
+    "positionName": "FullStack Developer",
+    "companyName": "Agumentik Group of Companies",
+    "location": " Bengaluru",
+    "logo": "",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "We are the fastest growing startup in Andhra Pradesh for designing Software, Website Development, App Development, Animation, Game Designing and Digital Marketing Era"
+  },
+  {
+    "picture": "https://img.freepik.com/free-vector/business-meeting-office-illustration-concept_52683-26610.jpg?w=2000",
+    "positionName": "Junior Engineer",
+    "companyName": "Crestaerospace Technologies Private Limited",
+    "location": "Bangalore",
+    "logo": "",
+    "brand": "Fresher Job",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "We are a team of Aerospace Domain specialists and our focus areas are Happy Customers and Happy Employees. We put great emphasis on Quality of Work and Deliverable so that every one is satisfied.e"
+  },
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3aR1lCMDNYFZA2JDpLNTKqbND7fXacU-GHgGkgq8G3EH0HAhKSjpGPfZ85GJt4bQBY5E&usqp=CAU",
+    "positionName": "Junior Officer for Designer",
+    "companyName": "Senior Visualizer/Graphic Designer",
+    "location": "Dhanmondi, Dhaka",
+    "logo": "",
+    "brand": "Fresher Job",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "xcellent knowledge in visualization.Excellent and Advanced knowledge on Adobe Photoshop, Illustrator, 3d Max, other Graphic related software"
+  },
+  {
+    "picture": "https://c8.alamy.com/comp/2H0KXBH/writing-displaying-text-best-workplace-conceptual-photo-ideal-company-to-work-with-high-compensation-stress-free-online-jobs-and-working-remotely-con-2H0KXBH.jpg",
+    "positionName": "Angular Developer ( Full Stack)",
+    "companyName": "Midas Software Solutions LTD  ",
+    "location": "Cyberjaya, Malaysi",
+    "logo": "https://media.licdn.com/dms/image/C4D0BAQHS9rquUQIzcg/company-logo_100_100/0/1657251828147?e=1684972800&v=beta&t=KFrVgaEhrdIdnSt7xvPJClzf2ApGt-y4WQ4vkg45XR4",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "As a Tech Lead at Deriv, you will be responsible for driving the technical direction of your team, assisting senior leaders on strategic roadmaps and driving priorities."
+  },
+
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZgqgclVpzEwxgPMxOXltAIHFg4C-jKEOsq-V0F_QwQAsWjkAqwgIFIMqs6uuFO_rgkbU&usqp=CAU",
+    "positionName": "React Native Developer",
+    "companyName": "BrightDev",
+    "location": "Bangladesh Remote",
+    "logo": "https://media.licdn.com/dms/image/C4E0BAQFsFO7g2IHLPw/company-logo_200_200/0/1672920710888?e=1684972800&v=beta&t=ITyTMxaBKE6Mu98_4CRWS11KzzukIEUCkshS9V5pAa4",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+  },
+  {
+    "picture": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PVz80BA3L-e3yfFLMpJsa2DioaAX9tCerLYrydgOEZVCGabDEiWaDXMSwqLQiwBeH_s&usqp=CAU",
+    "positionName": "Web Search Evaluator",
+    "companyName": "Appen",
+    "location": "Nator, Rajshahi, Bangladesh Remote ",
+    "logo": "https://media.licdn.com/dms/image/C560BAQHUHJih-Ly1ug/company-logo_100_100/0/1587035438283?e=1684972800&v=beta&t=asSi5K7_7c_YWjLeKj90AXl-X7QWXaHbHpnv-3TJYCg",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+  },
+  {
+    "picture": "https://devonjobs-uploads.s3.eu-west-2.amazonaws.com/633498717277/Finding-a-job.jpeg",
+    "positionName": "Senior Software Engineer",
+    "companyName": "SetSchedule",
+    "location": "Dhaka, Bangladesh Remote",
+    "logo": "https://media.licdn.com/dms/image/C560BAQF5_cfA_rl2-Q/company-logo_100_100/0/1615234152233?e=1684972800&v=beta&t=Z_XxVXQ04ZoH5HA7QhKv5oiePH-I4bwzSQ4OktVVNzk",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Are you a passionate developer who wants to build products that have a positive impact in the tech industry, or potentially the world? Are you an engineer who wants to take their career to the next level by mentoring and coaching a team of developers ?  "
+  },
+  {
+    "picture": "https://assets-global.website-files.com/602a97fb7ff89c083c49cc06/611d217a2985b2402359e4c5_Screenshot%202021-08-18%20at%2016.04.01.png",
+    "positionName": "Empleo Junior Backend Developer",
+    "companyName": "Trabajo",
+    "location": "Bangladesh Remote",
+    "logo": "https://media.licdn.com/dms/image/D4D0BAQGFJMkBlTYwMA/company-logo_100_100/0/1667236443972?e=1684972800&v=beta&t=ZBoP4eKDwYKTdZ34XGX962La7TlR9hFeThf27MWHKXs",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Traditional recruiting wasn’t designed for today’s software-first world. The old model is simply too slow, doesn’t allow for deep vetting and takes the control and ownership out of your hands."
+  },
+  {
+    "picture": "https://www.firstachieve.com/media/1082/summer-job-seekers-first-achieve.jpg",
+    "positionName": "Senior NodeJS Software Engineer",
+    "companyName": "BrightDev",
+    "location": "Dhaka, Bangladesh",
+    "logo": "https://media.licdn.com/dms/image/C560BAQExVwDLJIjW3A/company-logo_100_100/0/1519879432158?e=1684972800&v=beta&t=p71nk88_11Yx7whcufNmEbhMYcTY-GAl1C_yV3i8_J4",
+    "brand": "Experienced",
+    "time": "Full-time",
+    "phone": "+1 (992) 539-3560",
+    "description": "Zibew, a Singapore-based startup with Engineering Center in Hyderabad is hiring warrior-spirited developers who want to solve the next generation problems of the Pharma industry. "
+  }
+]
